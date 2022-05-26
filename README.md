@@ -2,7 +2,7 @@
 
 # 📝 [BÁO CÁO TIẾN ĐỘ THỰC TẬP](https://github.com/hoangtuandev/report-vnptit/blob/main/README.md)
 
-<h1 align='center'>⚡️<i>Stay awesome!</i>⚡️</h1>
+<h1 align='center'>⚡️<i>BÁO CÁO TIẾN ĐỘ THỰC TẬP</i>⚡️</h1>
 
 > ## ✏️ ***Câu 1: Mô hình Microservice ?***
 - Một ứng dụng được chia thành nhiều "thành phần" độc lập về mặt dữ liệu, đủ nhỏ về kích cỡ và đủ độ ảnh hưởng trong hệ thống.
