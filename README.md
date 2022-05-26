@@ -6,7 +6,7 @@
 
 > ## **BÁO CÁO TIẾN ĐỘ THỰC TẬP VNPT-IT**
 
-<span style="color:#337dc6;font-weight:700;font-size:20px"> 
+<span style="color:blue;font-weight:700;font-size:20px"> 
 ✏️ Câu 1: Mô hình Microservice ?
 </span>
 
