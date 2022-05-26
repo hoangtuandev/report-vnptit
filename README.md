@@ -1,4 +1,5 @@
 ![This is an image](https://vnptit.vn/VNPT-IT-theme/images/logo.png) 
+<p><img src="https://vnptit.vn/VNPT-IT-theme/images/logo.png"/></p>
 
 # 📝 [BÁO CÁO TIẾN ĐỘ THỰC TẬP](https://github.com/hoangtuandev/report-vnptit/blob/main/README.md)
 
