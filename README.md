@@ -25,7 +25,7 @@
 | Phù hợp với các hệ thống yêu cầu chặt chẽ về mặt dữ liệu | Phù hợp với các hệ thống chỉ yêu cầu lưu trữ dữ liệu
 
 > ## ✏️ ***Câu 4: Tìm hiểu về Angular***
-[**Angular**](https://angular.io/) là một Javascript Framework dùng để xây dựng các Single Page Application(SPA)
+[**Angular**](https://angular.io/) là một Javascript Framework dùng để viết giao diện Web, xây dựng các Single Page Application(SPA)
 ### [Ưu điểm của Angular](https://angular.io/)
 - Cú pháp mã lệnh đơn giản hơn Javascript thuần
 - Phân chia layout thành các component, tăng khả năng tái sử dụng và sửa lỗi
