@@ -1,5 +1,7 @@
 <span style="color:blue">BÁO CÁO TIẾN ĐỘ THỰC TẬP VNPT-IT</span>.
 
+![This is an image](https://vnptit.vn/VNPT-IT-theme/images/logo.png)
+
 > ### ✏️ **Câu 1: Mô hình Microservice ?**
 - Một ứng dụng được chia thành nhiều "thành phần" độc lập về mặt dữ liệu, đủ nhỏ về kích cỡ và đủ độ ảnh hưởng trong hệ thống.
 - Mỗi microservice có khả năng độc lập, đảm báo lắp vào hoặc tháo ra khỏi hệ thống không làm ảnh hưởng đến các thành phần khác
