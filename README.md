@@ -1,6 +1,6 @@
 <p align="center"><img src="https://vnptit.vn/VNPT-IT-theme/images/logo.png"/></p>
 <h1 align='center' style="color:blue;">⚡️<i>BÁO CÁO TIẾN ĐỘ THỰC TẬP</i>⚡️</h1>
-<h3 align='center' style="color:blue;">⚡️<i>Phạm Hoàng Tuấn</i>⚡️</h3>
+<h3 align='center' style="color:blue;">🌱<i>Phạm Hoàng Tuấn</i>🌱</h3>
 
 > ## ✏️ ***Câu 1: Mô hình Microservice ?***
 - Một ứng dụng được chia thành nhiều "thành phần" độc lập về mặt dữ liệu, đủ nhỏ về kích cỡ và đủ độ ảnh hưởng trong hệ thống.
