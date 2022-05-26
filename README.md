@@ -2,7 +2,7 @@
 <h1 align='center' style="color:blue;">⚡️<i>BÁO CÁO TIẾN ĐỘ THỰC TẬP</i>⚡️</h1>
 <h3 align='center' style="color:blue;">🌱<i>Phạm Hoàng Tuấn</i>🌱</h3>
 
-> ## ✏️ ***Câu 1: Mô hình Microservice ?***
+> ## ✏️ ***Câu 1: Kiến trúc Microservice ?***
 - Một ứng dụng được chia thành nhiều "thành phần" độc lập về mặt dữ liệu, đủ nhỏ về kích cỡ và đủ độ ảnh hưởng trong hệ thống.
 - Mỗi microservice có khả năng độc lập, đảm báo lắp vào hoặc tháo ra khỏi hệ thống không làm ảnh hưởng đến các thành phần khác
 - Có 4 đặc trưng: micro-service, tính độc lập, tính chuyên biệt, phòng chống lỗi.
