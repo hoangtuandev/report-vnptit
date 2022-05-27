@@ -1,4 +1,4 @@
-<p align="center"><img src="https://vnptit.vn/VNPT-IT-theme/images/logo.png"/></p>
+<p align="center"><img src="./vnpt-img.png"/></p>
 <h1 align='center' style="color:blue;">⚡️<i>BÁO CÁO TIẾN ĐỘ THỰC TẬP</i>⚡️</h1>
 <h3 align='center' style="color:blue;">🌱<i>Phạm Hoàng Tuấn</i>🌱</h3>
 
