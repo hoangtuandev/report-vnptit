@@ -54,11 +54,11 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 > ### ✏️ ***SƠ ĐỒ USECASE***
 ![SoDoUseCase](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/SoDoUsecase.png)
 
-**1. Chức năng Quản lý danh mục tổ chức** 🍂
+🍂**1. Chức năng Quản lý danh mục tổ chức** 
 
 - Tìm kiếm tổ chức: tìm kiếm theo: mã tổ chức, tên tổ chức.
 
-**2. Chức năng Quản lý danh mục chứng chỉ** 🍂
+🍂**2. Chức năng Quản lý danh mục chứng chỉ** 
 
 - Tìm kiếm: tìm kiếm theo tên danh mục chứng chỉ.
 
@@ -68,22 +68,22 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
     - Thay dổi trạng thái danh mục chứng chỉ sang “Ngưng sử dụng”.
     - Đảm bảo lưu trữ chứng chỉ của nhân viên dù chứng chỉ đã ngưng sử dụng.
 
-**3. Chức năng Quản lý chứng chỉ** 🍂
+🍂**3. Chức năng Quản lý chứng chỉ** 
 - Tìm kiếm: tìm kiếm chứng chỉ của nhân viên theo: mã nhân viên, tên nhân viên, tên đơn vị.
 - Xuất file danh sách: xuất file danh sách chứng chỉ của nhân viên.
 - 
-**4. Chức năng Quản lý đào tạo** 🍂
+🍂**4. Chức năng Quản lý đào tạo** 
 - Thêm chương trình đào tạo.
 - Thêm lịch đào tạo: mỗi Chương trình đào tạo sẽ có một hoặc nhiều lịch đào tạo theo: mã đào tạo, tên đào tạo, ngày bắt đầu, ngày kết thúc, trạng thái.
 - Tìm kiếm: tìm kiếm chương trình đào tạo.
 - Quản lý học viên thuộc chương trình đào tạo: thêm học viên vào chương trình đào tạo, xóa học viên khỏi chương trình đào tạo.
 - 
-**5. Chức năng Quản lý học viên** 🍂
+🍂**5. Chức năng Quản lý học viên** 
 - Đánh giá học viên sau khóa học.
 - Điểm danh: điểm danh các học viên.
 - Thanh toán: đánh dấu các học viên đã thanh toán học phí.
 
-**6. Chức năng quản lý dự toán** 🍂
+🍂**6. Chức năng quản lý dự toán** 
 - Tìm kiếm: tìm kiếm dự toán đào tạo theo: mã dự toán, số lượng học viên.
 - In dự toán.
 
