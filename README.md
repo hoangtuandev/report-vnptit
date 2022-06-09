@@ -30,4 +30,4 @@
 ### [Ưu điểm của Angular](https://angular.io/)
 - Cú pháp mã lệnh đơn giản hơn Javascript thuần
 - Phân chia layout thành các component, tăng khả năng tái sử dụng và sửa lỗi
-- Tạo ra các Single Page Application (SPA)
+- Tạo ra các Single Page Application (SPA).
