@@ -71,7 +71,7 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 🍂**3. Chức năng Quản lý chứng chỉ** 
 - Tìm kiếm: tìm kiếm chứng chỉ của nhân viên theo: mã nhân viên, tên nhân viên, tên đơn vị.
 - Xuất file danh sách: xuất file danh sách chứng chỉ của nhân viên.
-- 
+
 🍂**4. Chức năng Quản lý đào tạo** 
 - Thêm chương trình đào tạo.
 - Thêm lịch đào tạo: mỗi Chương trình đào tạo sẽ có một hoặc nhiều lịch đào tạo theo: mã đào tạo, tên đào tạo, ngày bắt đầu, ngày kết thúc, trạng thái.
