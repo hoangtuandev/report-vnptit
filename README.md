@@ -8,6 +8,7 @@
 - Mỗi microservice có khả năng độc lập, đảm báo lắp vào hoặc tháo ra khỏi hệ thống không làm ảnh hưởng đến các thành phần khác
 - Có 4 đặc trưng: micro-service, tính độc lập, tính chuyên biệt, phòng chống lỗi.
 
+
 > ### ✏️ ***Câu 2: So sánh kiến trúc Ứng dụng nguyên khối và Microservice ?***
 
 |       **Mô hình Microservice**         |          **Mô hình nguyên khối**       |
@@ -15,6 +16,7 @@
 |- Các microservice hoạt động tách biệt nhau trong hệ thống, do vậy việc build một microservice cũng độc lập với việc build các microservice khác. |- Toàn bộ ứng dụng là một khối lớn, trong khối lớn ấy có chia thành các mô đun nhỏ, mỗi mô đun thực hiện một nhiệm vụ riêng và các mô đun thường gọi nhau qua function call.
 |- Mỗi microservice là một dịch vụ chuyên biệt, có thể hoạt động độc lập.|- Việc phát triển và triển khai ứng dụng với kiến trúc này khá đơn giản khi mà các IDE hỗ trợ rất tốt việc kiểm tra và chạy ứng dụng với chỉ một cú click chuột hay một phím tắt.|
 |-Kiến trúc microservice sinh ra là để dành cho các hệ thống từ lớn đến vô cùng lớn.|Kiến trúc này cũng đặc biệt phù hợp với các công ty outsource.|
+
 
 > ### ✏️ ***Câu 3: So sánh SQL Database và  NoSQL Database*** 
 
@@ -26,6 +28,7 @@
 |**Hiệu năng**| Hiệu năng thường phụ thuộc vào hệ thống con của ổ đĩa.|Hiệu năng thường được xem là chức năng của kích cỡ cụm phần cứng ngầm, độ trễ mạng và ứng dụng đưa ra lệnh gọi.|
 |**Quy mô**| Cơ sở dữ liệu quan hệ thường tăng quy mô bằng cách tăng năng lực điện toán của phần cứng hoặc tăng quy mô bằng cách thêm bản sao của khối lượng công việc chỉ đọc.|Cơ sở dữ liệu NoSQL thường có tính phân mảnh cao do các mẫu truy cập khóa-giá trị có khả năng tăng quy mô bằng cách sử dụng kiến trúc được phân phối để tăng thông lượng, đem đến hiệu năng ổn định với quy mô gần như không giới hạn.|
 |**API**| Yêu cầu lưu trữ và truy xuất dữ liệu được truyền đạt bằng cách sử dụng các truy vấn nhất quán với ngôn ngữ truy vấn có cấu trúc (SQL). | API trên cơ sở đối tượng cho phép các nhà phát triển ứng dụng dễ dàng lưu trữ và truy xuất cấu trúc dữ liệu trong bộ nhớ. |
+
 
 
 
@@ -83,35 +86,37 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 **6. Chức năng quản lý dự toán** 🍂
 - Tìm kiếm: tìm kiếm dự toán đào tạo theo: mã dự toán, số lượng học viên.
 - In dự toán.
+
 > ### ✏️ ***SƠ ĐỒ CLASS***
 ![SoDoUseClass](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/SoDoClass.png)
 
+
 > ### ✏️ ***SƠ ĐỒ SEQUENCE***
-1. Tìm kiếm tổ chức
+🍂**1. Tìm kiếm tổ chức** 
 
 ![alt](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/SoDoTT_TimKiemToChuc.png)
 
-2. Xóa danh mục tổ chức
+🍂**2. Xóa danh mục tổ chức** 
 
 ![alt](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/SoDoTT_XoaDMTC.png)
 
-3. Sửa danh mục tổ chức
+🍂**3. Sửa danh mục tổ chức**
 
 ![alt](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/SoDoTT_SuaDMTC.png)
 
-4. In chứng chỉ
+🍂**4. In chứng chỉ**
 
 ![alt](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/SoDoTT_InChungChi.png)
 
-5. Khóa chứng chỉ
+🍂**5. Khóa chứng chỉ**
 
 ![alt](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/SoDoTT_KhoaChungChi.png)
 
-6. Điểm danh
+🍂**6. Điểm danh**
 
 ![alt](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/SoDoTT_DiemDanh.png)
 
-7. Thêm chương trình đào tạo
+🍂**7. Thêm chương trình đào tạo**
 
 ![alt](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/SoDoTT_ThemCTDT.png)
 
