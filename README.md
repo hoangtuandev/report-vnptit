@@ -1,6 +1,6 @@
 <!-- <p align="center"><img src="https://vnptit.vn/VNPT-IT-theme/images/logo.png"/></p> -->
 
-![alt](https://vnptit.vn/VNPT-IT-theme/images/logo.png)
+![](https://vnptit.vn/VNPT-IT-theme/images/logo.png)
 <h1 align='center' style="color:blue;">⚡️BÁO CÁO TIẾN ĐỘ THỰC TẬP⚡️</h1>
 <h3 align='center' style="color:blue;">🌱Phạm Hoàng Tuấn - Trần Lê Tuyết Hương🌱</h3>
 
