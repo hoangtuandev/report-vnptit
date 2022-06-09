@@ -1,6 +1,6 @@
 <p align="center"><img src="https://vnptit.vn/VNPT-IT-theme/images/logo.png"/></p>
-<h1 align='center' style="color:blue;">⚡️<i>BÁO CÁO TIẾN ĐỘ THỰC TẬP</i>⚡️</h1>
-<h3 align='center' style="color:blue;">🌱<i>Phạm Hoàng Tuấn</i>🌱</h3>
+<h1 align='center' style="color:blue;">⚡️BÁO CÁO TIẾN ĐỘ THỰC TẬP⚡️</h1>
+<h3 align='center' style="color:blue;">🌱Phạm Hoàng Tuấn🌱</h3>
 
 > ## ✏️ ***Câu 1: Kiến trúc Microservice ?***
 - Một ứng dụng được chia thành nhiều "thành phần" độc lập về mặt dữ liệu, đủ nhỏ về kích cỡ và đủ độ ảnh hưởng trong hệ thống.
@@ -9,8 +9,9 @@
 
 > ## ✏️ ***Câu 2: So sánh kiến trúc Ứng dụng nguyên khối và Microservice ?***
 
+
 | Nguyên khối                       | Microservice 
-| :---                              |    :----  
+| :---------------------------------| :------------------------------------------------
 | Toàn bộ ứng dụng là một khối      | Toàn bộ ứng dụng được chia thành nhiều thành phần     
 | Triển khai và phát tiển ứng dụng khá đơn giản   | Triển khai ứng dụng phức tạp do có nhiều thành phần
 | Các lập trình viên phải tuân thủ các quy tắc và tiêu chuẩn chung| Lập trình viên tuân thủ các quy tắc và tiêu chuẩn theo mỗi thành phần
