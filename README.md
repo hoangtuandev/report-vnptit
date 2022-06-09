@@ -33,4 +33,4 @@
 - Phân chia layout thành các component, tăng khả năng tái sử dụng và sửa lỗi
 - Tạo ra các Single Page Application (SPA).
 
-## [TUẦN 2](https://github.com/hoangtuandev/report-vnptit)
+## **[TUẦN 2](https://github.com/hoangtuandev/report-vnptit)**
