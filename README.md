@@ -45,10 +45,42 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 
 > ### ✏️ ***Câu 6: Tìm hiểu về Spring Boot***
 - Spring Boot là một dự án phát triển bởi JAV (ngôn ngữ java) trong hệ sinh thái Spring framework. Nó giúp cho các lập trình viên chúng ta đơn giản hóa quá trình lập trình một ứng dụng với Spring, chỉ tập trung vào việc phát triển business cho ứng dụng.
-- Spring Boot là một giải pháp được sử dụng rộng rãi ngày nay để phát triển ứng dụng web Java. Nó có một quy ước cố định về cách tiếp cận cấu hình. Nó hoàn toàn được điều khiển bởi cấu hình và làm cho việc sử dụng Spring Framework và nhiều thư viện của bên thứ ba khác trở nên thú vị. Các ứng dụng Spring Boot là cấp sản xuất và chỉ có thể chạy trong bất kỳ môi trường nào có cài đặt JVM. Nó sử dụng một thùng chứa servlet được nhúng như Tomcat, Jetty hoặc Undertow để chạy ứng dụng. Nó tự động cấu hình Spring bất cứ khi nào có thể với các giá trị mặc định hợp lý và có POM khởi động cho nhiều mô-đun và thư viện của bên thứ ba. Nó không yêu cầu bất kỳ cấu hình XML nào và cho phép bạn tùy chỉnh các bean tự động định cấu hình bằng cách sử dụng cấu hình Java.
+- Spring Boot là một giải pháp được sử dụng rộng rãi ngày nay để phát triển ứng dụng web Java. Nó có một quy ước cố định về cách tiếp cận cấu hình. Nó hoàn toàn được điều khiển bởi cấu hình và làm cho việc sử dụng Spring Framework và nhiều thư viện của bên thứ ba khác trở nên thú vị. Các ứng dụng Spring Boot là cấp sản xuất và chỉ có thể chạy trong bất kỳ môi trường nào có cài đặt JVM. Nó tự động cấu hình Spring bất cứ khi nào có thể với các giá trị mặc định hợp lý và có POM khởi động cho nhiều mô-đun và thư viện của bên thứ ba. Nó không yêu cầu bất kỳ cấu hình XML nào và cho phép bạn tùy chỉnh các bean tự động định cấu hình bằng cách sử dụng cấu hình Java.
 
-## **[TUẦN 2: 23/05/2022 - 29/05/2022](https://github.com/hoangtuandev/report-vnptit)**
+## **[TUẦN 2: 30/05/2022 - 05/06/2022](https://github.com/hoangtuandev/report-vnptit)**
+> ### ✏️ ***SƠ ĐỒ USECASE***
+![SoDoUseCase](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/SoDoUsecase.png)
 
+**1. Chức năng Quản lý danh mục tổ chức** 🍂
 
+- Tìm kiếm tổ chức: tìm kiếm theo: mã tổ chức, tên tổ chức.
 
-## **[TUẦN 3: 23/05/2022 - 29/05/2022](https://github.com/hoangtuandev/report-vnptit)**
+**2. Chức năng Quản lý danh mục chứng chỉ** 🍂
+
+- Tìm kiếm: tìm kiếm theo tên danh mục chứng chỉ.
+
+- Quản lý trạng thái danh mục chứng chỉ: mỗi danh mục chứng chỉ có trạng thái hoặc “Đang sử dụng” hoặc “Ngưng sử dụng”
+
+- Khóa chứng chỉ:
+    - Thay dổi trạng thái danh mục chứng chỉ sang “Ngưng sử dụng”.
+    - Đảm bảo lưu trữ chứng chỉ của nhân viên dù chứng chỉ đã ngưng sử dụng.
+
+**3. Chức năng Quản lý chứng chỉ** 🍂
+- Tìm kiếm: tìm kiếm chứng chỉ của nhân viên theo: mã nhân viên, tên nhân viên, tên đơn vị.
+- Xuất file danh sách: xuất file danh sách chứng chỉ của nhân viên.
+- 
+**4. Chức năng Quản lý đào tạo** 🍂
+- Thêm chương trình đào tạo.
+- Thêm lịch đào tạo: mỗi Chương trình đào tạo sẽ có một hoặc nhiều lịch đào tạo theo: mã đào tạo, tên đào tạo, ngày bắt đầu, ngày kết thúc, trạng thái.
+- Tìm kiếm: tìm kiếm chương trình đào tạo.
+- Quản lý học viên thuộc chương trình đào tạo: thêm học viên vào chương trình đào tạo, xóa học viên khỏi chương trình đào tạo.
+- 
+**5. Chức năng Quản lý học viên** 🍂
+- Đánh giá học viên sau khóa học.
+- Điểm danh: điểm danh các học viên.
+- Thanh toán: đánh dấu các học viên đã thanh toán học phí.
+
+**6. Chức năng quản lý dự toán** 🍂
+- Tìm kiếm: tìm kiếm dự toán đào tạo theo: mã dự toán, số lượng học viên.
+- In dự toán.
+## **[TUẦN 3: 06/06/2022 - 12/06/2022](https://github.com/hoangtuandev/report-vnptit)**
