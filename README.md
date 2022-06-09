@@ -1,6 +1,5 @@
 <p align="center"><img src="https://vnptit.vn/VNPT-IT-theme/images/logo.png"/></p>
-
-### [⚡️BÁO CÁO TIẾN ĐỘ THỰC TẬP⚡️](https://angular.io/)
+<h1 align='center' style="color:blue;">⚡️BÁO CÁO TIẾN ĐỘ THỰC TẬP⚡️</h1>
 <h3 align='center' style="color:blue;">🌱Phạm Hoàng Tuấn🌱</h3>
 
 > ## ✏️ ***Câu 1: Kiến trúc Microservice ?***
@@ -9,7 +8,6 @@
 - Có 4 đặc trưng: micro-service, tính độc lập, tính chuyên biệt, phòng chống lỗi.
 
 > ## ✏️ ***Câu 2: So sánh kiến trúc Ứng dụng nguyên khối và Microservice ?***
-
 
 | Nguyên khối                       | Microservice 
 | :---------------------------------| :------------------------------------------------
