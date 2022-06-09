@@ -2,7 +2,7 @@
 <h1 align='center' style="color:blue;">⚡️BÁO CÁO TIẾN ĐỘ THỰC TẬP⚡️</h1>
 <h3 align='center' style="color:blue;">🌱Phạm Hoàng Tuấn - Trần Lê Tuyết Hương🌱</h3>
 
-## [TUẦN 1](https://github.com/hoangtuandev/report-vnptit)
+## **[TUẦN 1](https://github.com/hoangtuandev/report-vnptit)**
 > ### ✏️ ***Câu 1: Kiến trúc Microservice ?***
 - Một ứng dụng được chia thành nhiều "thành phần" độc lập về mặt dữ liệu, đủ nhỏ về kích cỡ và đủ độ ảnh hưởng trong hệ thống.
 - Mỗi microservice có khả năng độc lập, đảm báo lắp vào hoặc tháo ra khỏi hệ thống không làm ảnh hưởng đến các thành phần khác
