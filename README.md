@@ -10,12 +10,11 @@
 
 > ### ✏️ ***Câu 2: So sánh kiến trúc Ứng dụng nguyên khối và Microservice ?***
 
-| Nguyên khối                       | Microservice 
-| :---------------------------------| :------------------------------------------------
-| Toàn bộ ứng dụng là một khối      | Toàn bộ ứng dụng được chia thành nhiều thành phần     
-| Triển khai và phát tiển ứng dụng khá đơn giản   | Triển khai ứng dụng phức tạp do có nhiều thành phần
-| Các lập trình viên phải tuân thủ các quy tắc và tiêu chuẩn chung| Lập trình viên tuân thủ các quy tắc và tiêu chuẩn theo mỗi thành phần
-| Tốn kém thời gian sửa chữa, bảo trì trên một hệ thống lớn | Tiết kiệm thời gian chỉ cần sửa chữa, bảo trì trên một thành phần
+|       **Mô hình Microservice**         |          **Mô hình nguyên khối**       |
+|:------------------------------|:------------------------------|
+|- Các microservice hoạt động tách biệt nhau trong hệ thống, do vậy việc build một microservice cũng độc lập với việc build các microservice khác. |- Toàn bộ ứng dụng là một khối lớn, trong khối lớn ấy có chia thành các mô đun nhỏ, mỗi mô đun thực hiện một nhiệm vụ riêng và các mô đun thường gọi nhau qua function call.
+|- Mỗi microservice là một dịch vụ chuyên biệt, có thể hoạt động độc lập.|- Việc phát triển và triển khai ứng dụng với kiến trúc này khá đơn giản khi mà các IDE hỗ trợ rất tốt việc kiểm tra và chạy ứng dụng với chỉ một cú click chuột hay một phím tắt.|
+|-Kiến trúc microservice sinh ra là để dành cho các hệ thống từ lớn đến vô cùng lớn.|Kiến trúc này cũng đặc biệt phù hợp với các công ty outsource.|
 
 > ### ✏️ ***Câu 3: So sánh SQL Database và  NoSQL Database*** 
 
@@ -29,13 +28,24 @@
 |**API**| Yêu cầu lưu trữ và truy xuất dữ liệu được truyền đạt bằng cách sử dụng các truy vấn nhất quán với ngôn ngữ truy vấn có cấu trúc (SQL). | API trên cơ sở đối tượng cho phép các nhà phát triển ứng dụng dễ dàng lưu trữ và truy xuất cấu trúc dữ liệu trong bộ nhớ. |
 
 
-> ### ✏️ ***Câu 4: Tìm hiểu về Angular***
+
+
+
+> ### ✏️ ***Câu 4: Cơ sở dữ liệu phân tán***
+Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có liên quan (về logic) được dùng chung và phân tán về mặt vật lí trên một mạng máy tính.
+
+> ### ✏️ ***Câu 5: Tìm hiểu về Angular***
 [**Angular**](https://angular.io/) là một Javascript Framework dùng để viết giao diện Web, xây dựng các Single Page Application(SPA)
 
 ### [Ưu điểm của Angular](https://angular.io/)
 - Cú pháp mã lệnh đơn giản hơn Javascript thuần
 - Phân chia layout thành các component, tăng khả năng tái sử dụng và sửa lỗi
 - Tạo ra các Single Page Application (SPA).
+
+
+> ### ✏️ ***Câu 6: Tìm hiểu về Spring Boot***
+- Spring Boot là một dự án phát triển bởi JAV (ngôn ngữ java) trong hệ sinh thái Spring framework. Nó giúp cho các lập trình viên chúng ta đơn giản hóa quá trình lập trình một ứng dụng với Spring, chỉ tập trung vào việc phát triển business cho ứng dụng.
+- Spring Boot là một giải pháp được sử dụng rộng rãi ngày nay để phát triển ứng dụng web Java. Nó có một quy ước cố định về cách tiếp cận cấu hình. Nó hoàn toàn được điều khiển bởi cấu hình và làm cho việc sử dụng Spring Framework và nhiều thư viện của bên thứ ba khác trở nên thú vị. Các ứng dụng Spring Boot là cấp sản xuất và chỉ có thể chạy trong bất kỳ môi trường nào có cài đặt JVM. Nó sử dụng một thùng chứa servlet được nhúng như Tomcat, Jetty hoặc Undertow để chạy ứng dụng. Nó tự động cấu hình Spring bất cứ khi nào có thể với các giá trị mặc định hợp lý và có POM khởi động cho nhiều mô-đun và thư viện của bên thứ ba. Nó không yêu cầu bất kỳ cấu hình XML nào và cho phép bạn tùy chỉnh các bean tự động định cấu hình bằng cách sử dụng cấu hình Java.
 
 ## **[TUẦN 2: 23/05/2022 - 29/05/2022](https://github.com/hoangtuandev/report-vnptit)**
 
