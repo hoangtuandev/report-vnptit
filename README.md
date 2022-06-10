@@ -123,3 +123,17 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 ![alt](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/SoDoTT_ThemCTDT.png)
 
 ## **[TUẦN 3: 06/06/2022 - 12/06/2022](https://github.com/hoangtuandev/report-vnptit)**
+
+> ### ✏️ ***Câu 1: Tìm hiểu về Jhipster***
+
+- [**Jhipster**](https://www.jhipster.tech/) là một nền tảng để tạo, phát triển và triển khai các ứng dụng web hiện đại và kiến trúc Microservice.
+- Về frontend, chúng hỗ trợ nhiều công nghệ: Angular, React và Vue. Chúng thậm chí có hỗ trợ ứng dụng mobile với React Native.
+- Về backend, chúng hỗ trợ Spring Boot (với Java và Kotlin), Micronaut, Quarkus, Node.js và .NET. 
+- Về triển khai, chúng nắm vững các nguyên tác hoạt động của đám mây với Docaker và Kubernetes. Hỗ trợ triển khai trên AWS, Azure, Cloud Foundry, Google Cloud Platform, Heroku và Open Shift.
+
+> ### ✏️ ***Câu 2: Angular trong dự án Jhipster***
+- Angular được sử dụng để xây dựng giao diện người dụng trong dự án Jhipster
+- Thư viện ng-jhipster chứa các chức năng tiện ích và các thành phần phổ biến.
+- Angular CLI được sử dụng để xây dựng và thử nghiệm các ứng dụng JHipster.
+- Cấu trúc dự án được sử dụng theo kiểu Angular.
+- Sử dụng bộ định tuyến Angular để tổ chức các phần khác nhau của ứng dụng khách.
