@@ -79,7 +79,7 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 - Thêm lịch đào tạo: mỗi Chương trình đào tạo sẽ có một hoặc nhiều lịch đào tạo theo: mã đào tạo, tên đào tạo, ngày bắt đầu, ngày kết thúc, trạng thái.
 - Tìm kiếm: tìm kiếm chương trình đào tạo.
 - Quản lý học viên thuộc chương trình đào tạo: thêm học viên vào chương trình đào tạo, xóa học viên khỏi chương trình đào tạo.
-- 
+
 🍂**5. Chức năng Quản lý học viên** 
 - Đánh giá học viên sau khóa học.
 - Điểm danh: điểm danh các học viên.
@@ -137,3 +137,10 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 - Angular CLI được sử dụng để xây dựng và thử nghiệm các ứng dụng JHipster.
 - Cấu trúc dự án được sử dụng theo kiểu Angular.
 - Sử dụng bộ định tuyến Angular để tổ chức các phần khác nhau của ứng dụng khách.
+
+🌺🌺🌺[**Trước khi sử dụng Angular để thay đổi giao diện dự án**](https://angular.io/)🌺🌺🌺
+[](https://angular.io/)
+
+🌺🌺🌺[**Sau khi sử dụng Angular để thay đổi giao diện dự án**](https://angular.io/)🌺🌺🌺
+[](https://angular.io/)
+
