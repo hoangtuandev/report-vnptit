@@ -140,7 +140,7 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 - Sử dụng bộ định tuyến Angular để tổ chức các phần khác nhau của ứng dụng khách.
 
 🌺🌺🌺[**Trước khi sử dụng Angular để thay đổi giao diện dự án**](https://angular.io/)🌺🌺🌺
-[](https://angular.io/)
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/GiaoDienTruocChinhSua.PNG)
 
 🌺🌺🌺[**Sau khi sử dụng Angular để thay đổi giao diện dự án**](https://angular.io/)🌺🌺🌺
 
