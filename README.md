@@ -149,5 +149,7 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 
 ## **[TUẦN 4: 13/06/2022 - 19/06/2022](https://github.com/hoangtuandev/report-vnptit)**
 
-> ### ✏️ **Chức năng Thêm mới Chương trình đào tạo**
+> ### ✏️ **Chức năng "Thêm mới Chương trình đào tạo"**
+
+➡️
 
