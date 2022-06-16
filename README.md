@@ -152,4 +152,5 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 > ### ✏️ **Chức năng "Thêm mới Chương trình đào tạo"**
 
 ➡️ *Người dùng nhấn vào nút "Thêm mới Chương trình đào tạo"*
+[**src/main/webapp/app/entities/chuong-trinh-dao-tao/list/chuong-trinh-dao-tao.component.html**]()
 
