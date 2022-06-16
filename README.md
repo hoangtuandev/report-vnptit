@@ -167,6 +167,10 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 
 ![TimKiemChungChi.png](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/TimKiemChungChi.png)
 
+🌸**5. Chức năng "Duyệt Chương Trình Đào Tạo"**
+
+![TimKiemChungChi.png](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/DuyetChuongTrinhDaoTao.png)
+
 > ### ✏️ **Chức năng "Thêm mới Chương trình đào tạo"**
 
 ➡️ *Người dùng nhấn vào nút "Thêm mới Chương trình đào tạo"*
@@ -207,7 +211,20 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 
 ➡️ *Gửi yêu cầu Thêm mới Chương trình đào tạo tương ứng với URL đã được khởi tạo đến Server*
 
-**JAVA**
+[**src/main/java/vn/vnpt/his/web/rest/ChuongTrinhDaoTaoResource.java**]()
+- Nơi chứa các mã nguồn, các yêu cầu ánh xạ cho các phương thức dùng chung cho Quản lý Chương trình đào tạo
+- Hàm ```createChuongTrinhDaoTao()``` lưu thông tin Chương trình đào tạo
+
+➡️ *Yêu cầu khởi tạo đối tượng Chương trình đào tạo*
+
+[**src/main/java/vn/vnpt/his/repository/ChuongTrinhDaoTaoRepository.java**]()
+- Kho lưu trữ Spring Data SQL cho thực thể Chương trình đào tạo
+
+➡️ *Yêu cầu khởi tạo đối tượng Chương trình đào tạo*
+
+[**src/main/java/vn/vnpt/his/domain/ChuongTrinhDaoTao.java**]()
+- Chứa các thuộc tính của thực thể Chương trình đào tạo
+- Khởi tạo đối tượng Chương trình đào tạo
 
 ➡️ *Client thực hiện tải lại trang web(Load Page)*
 
@@ -229,7 +246,9 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 
 ➡️ *Gửi yêu cầu lấy thông tin tất cả Chương trình đào tạo tương ứng với URL đã được khởi tạo đến Server*
 
-**JAVA**
+[**src/main/java/vn/vnpt/his/web/rest/ChuongTrinhDaoTaoResource.java**]()
+- Nơi chứa các mã nguồn, các yêu cầu ánh xạ cho các phương thức dùng chung cho Quản lý Chương trình đào tạo
+- Hàm ```getAllChuongTrinhDaoTaos()```  yêu cầu lấy thông tin của tất cả Chương trình đào tạo
 
 ➡️ *Thông tin tất cả Chương trình đào tạo được trả về Client*
 
