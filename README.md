@@ -147,3 +147,7 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 
 ![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/MenuQLDT.png)
 
+## **[TUẦN 4: 13/06/2022 - 19/06/2022](https://github.com/hoangtuandev/report-vnptit)**
+
+> ### ✏️ **Chức năng Thêm mới Chương trình đào tạo**
+
