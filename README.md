@@ -177,7 +177,7 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 
 ➡️ *Yêu cầu dịch vụ ```create()```*
 
-[**src/main/webapp/app/entities/chuong-trinh-dao-tao/sevice/chuong-trinh-dao-tao-update.service.ts**]()
+[**src/main/webapp/app/entities/chuong-trinh-dao-tao/sevice/chuong-trinh-dao-tao.service.ts**]()
 - Là nơi chứa các dịch vụ, phương thức dùng chung cho toàn bộ chức năng Quản lý Chương trình đào tạo
 - Hàm ```create()``` sử dụng phương thức POST của HTTP Method và yêu cầu khởi tạo một URL đến API Thêm mới Chương trình đào tạo
 
@@ -187,7 +187,42 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 - Nơi cấu hình các dịch vụ(service) cho toàn bộ ứng dụng
 - Hàm ```getEndpointFor()``` khởi tạo một URL dẫn đến API Thêm mới Chương trình đào tạo theo yêu cầu
 
-➡️ *Gửi yêu cầu Thêm mới Chương trình đào tạo tương ứng với URL đã được khởi tạo*
+➡️ *Gửi yêu cầu Thêm mới Chương trình đào tạo tương ứng với URL đã được khởi tạo đến Server*
+
 **JAVA**
 
+➡️ *Client thực hiện tải lại trang web(Load Page)*
 
+[**src/main/webapp/app/entities/chuong-trinh-dao-tao/list/chuong-trinh-dao-tao.component.ts**]()
+- Là nơi chứa các hàm xử lý các sự kiện(event), xử lý logic chung cho Quản lý Chương trình đào tạo
+- Hàm ```loadPage()``` gọi đến dịch vụ ```query()``` yêu cầu lấy thông tin tất cả Chương trình đào tạo
+
+➡️ *Yêu cầu dịch vụ ```query()```*
+
+[**src/main/webapp/app/entities/chuong-trinh-dao-tao/sevice/chuong-trinh-dao-tao.service.ts**]()
+- Là nơi chứa các dịch vụ, phương thức dùng chung cho toàn bộ chức năng Quản lý Chương trình đào tạo
+- Hàm ```query()``` sử dụng phương thức GET của HTTP Method và yêu cầu khởi tạo một URL đến API lấy thông tin tất cả Chương trình đào tạo
+
+➡️ *Yêu cầu khởi tạo một URL dẫn đến API lấy thông tin tất cả Chương trình đào tạo*
+
+[**src/main/webapp/app/core/config/application-config.service**]()
+- Nơi cấu hình các dịch vụ(service) cho toàn bộ ứng dụng
+- Hàm ```getEndpointFor()``` khởi tạo một URL dẫn đến API lấy thông tin tất cả Chương trình đào tạo theo yêu cầu
+
+➡️ *Gửi yêu cầu lấy thông tin tất cả Chương trình đào tạo tương ứng với URL đã được khởi tạo đến Server*
+
+**JAVA**
+
+➡️ *Thông tin tất cả Chương trình đào tạo được trả về Client*
+
+[**src/main/webapp/app/entities/chuong-trinh-dao-tao/list/chuong-trinh-dao-tao.component.ts**]()
+- Là nơi chứa các hàm xử lý các sự kiện(event), xử lý logic chung cho Quản lý Chương trình đào tạo
+- Biến ```chuongTrinhDaoTaos``` lưu thông tin tất cả Chương trình đào tạo
+
+➡️ *Truyền thông tin tất cả Chương trình đào tạo cho việc hiển thị với người dùng*
+
+[**src/main/webapp/app/entities/chuong-trinh-dao-tao/list/chuong-trinh-dao-tao.component.html**]()
+- Là giao diện chính của Quản lý Chương trình đào tạo
+- Sử dụng ```chuongTrinhDaoTao.[attributes]``` để truyền dữ liệu vào danh sách Chương trình đào tạo
+
+➡️ *Danh sách thông tin tất cả Chương trình đào tạo được hiển thị trên giao diện người dùng*
