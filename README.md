@@ -149,6 +149,24 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 
 ## **[TUẦN 4: 13/06/2022 - 19/06/2022](https://github.com/hoangtuandev/report-vnptit)**
 
+### 💐 **SƠ ĐỒ LUỒNG CÁC CHỨC NĂNG**
+
+🌼**1. Chức năng "Thêm Chương Trình Đào Tạo"**
+
+![ThemChuongTrinhDaoTao.png](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/ThemChuongTrinhDaoTao.png)
+
+🌹**2. Chức năng "Sửa Chương Trình Đào Tạo"**
+
+![SuaChuongTrinhDaoTao.png](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/SuaChuongTrinhDaoTao.png)
+
+🌻**3. Chức năng "Xoá Chương Trình Đào Tạo"**
+
+![XoaChuongTrinhDaoTao.png](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/XoaChuongTrinhDaoTao.png)
+
+🌷**4. Chức năng "Tìm Kiếm Chứng Chỉ"**
+
+![TimKiemChungChi.png](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/TimKiemChungChi.png)
+
 > ### ✏️ **Chức năng "Thêm mới Chương trình đào tạo"**
 
 ➡️ *Người dùng nhấn vào nút "Thêm mới Chương trình đào tạo"*
