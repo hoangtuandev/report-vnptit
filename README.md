@@ -156,3 +156,4 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 [**src/main/webapp/app/entities/chuong-trinh-dao-tao/list/chuong-trinh-dao-tao.component.html**]()
 - Là giao diện chính của Quản lý Chương trình đào tạo
 - ```<button [routerLink]="/chuong-trinh-dao-tao/new">Thêm mới Chương trình Đào tạo</button>```
+smdsdmskdmskm
