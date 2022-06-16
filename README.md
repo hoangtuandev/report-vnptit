@@ -155,5 +155,10 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 
 [**src/main/webapp/app/entities/chuong-trinh-dao-tao/list/chuong-trinh-dao-tao.component.html**]()
 - Là giao diện chính của Quản lý Chương trình đào tạo
-- ```<button [routerLink]="/chuong-trinh-dao-tao/new">Thêm mới Chương trình Đào tạo</button>```
-smdsdmskdmskm
+- ```<button [routerLink]="/chuong-trinh-dao-tao/new">Thêm mới Chương trình Đào tạo</button>``` - Sử dụng giá trị "/chuong-trinh-dao-tao/new" của thuộc tính [routerLink] để làm đường dẫn cho component tiếp theo được render.
+
+➡️ *Giá trị ```/chuong-trinh-dao-tao/new``` được sử dụng cho việc định tuyến*
+
+[**src/main/webapp/app/entities/chuong-trinh-dao-tao/list/chuong-trinh-dao-tao-routing.module.ts**]()
+- Là nơi chứa các Route, với mỗi "đường dẫn"(path) các component tương ứng sẽ được render
+- Với ```Routes = { path: '/chuong-trinh-dao-tao/new' }```, component ChuongTrinhDaoTaoUpdate sẽ được render.
