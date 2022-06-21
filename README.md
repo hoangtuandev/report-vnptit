@@ -176,24 +176,32 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 ➡️ *Người dùng nhấn vào nút "Thêm mới Chương trình đào tạo"*
 
 [**src/main/webapp/app/entities/chuong-trinh-dao-tao/list/chuong-trinh-dao-tao.component.html**]()
+
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/1.png)
 - Là giao diện chính của Quản lý Chương trình đào tạo
 - ```<button [routerLink]="/chuong-trinh-dao-tao/new">Thêm mới Chương trình Đào tạo</button>``` - Sử dụng giá trị "/chuong-trinh-dao-tao/new" của thuộc tính [routerLink] để làm đường dẫn cho component tiếp theo được render.
 
 ➡️ *Giá trị ```/chuong-trinh-dao-tao/new``` được sử dụng cho việc định tuyến*
 
 [**src/main/webapp/app/entities/chuong-trinh-dao-tao/list/chuong-trinh-dao-tao-routing.module.ts**]()
+
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/2.png)
 - Là nơi chứa các Route, với mỗi "đường dẫn"(path) các component tương ứng sẽ được render
 - Với ```Routes = { path: '/chuong-trinh-dao-tao/new' }```, component ChuongTrinhDaoTaoUpdate sẽ được render.
 
 ➡️ *Form nhập thông tin Chương trình đào tạo mới được hiển thị*
 
 [**src/main/webapp/app/entities/chuong-trinh-dao-tao/list/chuong-trinh-dao-tao-update.component.html**]()
+
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/3.png)
 - Là giao diện form thêm mới/cập nhật thông tin của Chương trình đào tạo
 - ```<form (ngSubmit)="save()"></form>```- Hàm save() sẽ được kích hoạt khi người dùng nhấn nút "Lưu"
 
 ➡️ *Người dùng nhập thông tin Chương trình đào tạo và nhấn nút "Lưu"*
 
 [**src/main/webapp/app/entities/chuong-trinh-dao-tao/list/chuong-trinh-dao-tao-update.component.ts**]()
+
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/4.png)
 - Là nơi chứa các hàm xử lý các sự kiện(event), xử lý logic cho việc thêm mới/cập nhật thông tin Chương trình đào tạo
 - Hàm ```save()``` tạo một biến chuongTrinhDaoTao(object type) để lưu thông tin đối tượng và gọi đến hàm ```create()``` với tham số chuongTrinhDaoTao để hậu xử lý tạo mới Chương trình đào tạo.
 
