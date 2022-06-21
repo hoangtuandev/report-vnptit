@@ -208,65 +208,88 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 ➡️ *Yêu cầu dịch vụ ```create()```*
 
 [**src/main/webapp/app/entities/chuong-trinh-dao-tao/sevice/chuong-trinh-dao-tao.service.ts**]()
+
+
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/6.png)
 - Là nơi chứa các dịch vụ, phương thức dùng chung cho toàn bộ chức năng Quản lý Chương trình đào tạo
 - Hàm ```create()``` sử dụng phương thức POST của HTTP Method và yêu cầu khởi tạo một URL đến API Thêm mới Chương trình đào tạo
 
 ➡️ *Yêu cầu khởi tạo một URL dẫn đến API Thêm mới Chương trình đào tạo*
 
 [**src/main/webapp/app/core/config/application-config.service**]()
+
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/7.png)
 - Nơi cấu hình các dịch vụ(service) cho toàn bộ ứng dụng
 - Hàm ```getEndpointFor()``` khởi tạo một URL dẫn đến API Thêm mới Chương trình đào tạo theo yêu cầu
 
 ➡️ *Gửi yêu cầu Thêm mới Chương trình đào tạo tương ứng với URL đã được khởi tạo đến Server*
 
 [**src/main/java/vn/vnpt/his/web/rest/ChuongTrinhDaoTaoResource.java**]()
+
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/8.png)
 - Nơi chứa các mã nguồn, các yêu cầu ánh xạ cho các phương thức dùng chung cho Quản lý Chương trình đào tạo
 - Hàm ```createChuongTrinhDaoTao()``` lưu thông tin Chương trình đào tạo
 
 ➡️ *Yêu cầu khởi tạo đối tượng Chương trình đào tạo*
 
 [**src/main/java/vn/vnpt/his/repository/ChuongTrinhDaoTaoRepository.java**]()
+
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/15.png)
 - Kho lưu trữ Spring Data SQL cho thực thể Chương trình đào tạo
 
 ➡️ *Yêu cầu khởi tạo đối tượng Chương trình đào tạo*
 
 [**src/main/java/vn/vnpt/his/domain/ChuongTrinhDaoTao.java**]()
+
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/9.png)
 - Chứa các thuộc tính của thực thể Chương trình đào tạo
 - Khởi tạo đối tượng Chương trình đào tạo
 
 ➡️ *Client thực hiện tải lại trang web(Load Page)*
 
 [**src/main/webapp/app/entities/chuong-trinh-dao-tao/list/chuong-trinh-dao-tao.component.ts**]()
+
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/10.png)
 - Là nơi chứa các hàm xử lý các sự kiện(event), xử lý logic chung cho Quản lý Chương trình đào tạo
 - Hàm ```loadPage()``` gọi đến dịch vụ ```query()``` yêu cầu lấy thông tin tất cả Chương trình đào tạo
 
 ➡️ *Yêu cầu dịch vụ ```query()```*
 
 [**src/main/webapp/app/entities/chuong-trinh-dao-tao/sevice/chuong-trinh-dao-tao.service.ts**]()
+
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/11.png)
 - Là nơi chứa các dịch vụ, phương thức dùng chung cho toàn bộ chức năng Quản lý Chương trình đào tạo
 - Hàm ```query()``` sử dụng phương thức GET của HTTP Method và yêu cầu khởi tạo một URL đến API lấy thông tin tất cả Chương trình đào tạo
 
 ➡️ *Yêu cầu khởi tạo một URL dẫn đến API lấy thông tin tất cả Chương trình đào tạo*
 
 [**src/main/webapp/app/core/config/application-config.service**]()
+
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/7.png)
 - Nơi cấu hình các dịch vụ(service) cho toàn bộ ứng dụng
 - Hàm ```getEndpointFor()``` khởi tạo một URL dẫn đến API lấy thông tin tất cả Chương trình đào tạo theo yêu cầu
 
 ➡️ *Gửi yêu cầu lấy thông tin tất cả Chương trình đào tạo tương ứng với URL đã được khởi tạo đến Server*
 
 [**src/main/java/vn/vnpt/his/web/rest/ChuongTrinhDaoTaoResource.java**]()
+
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/12.png)
 - Nơi chứa các mã nguồn, các yêu cầu ánh xạ cho các phương thức dùng chung cho Quản lý Chương trình đào tạo
 - Hàm ```getAllChuongTrinhDaoTaos()```  yêu cầu lấy thông tin của tất cả Chương trình đào tạo
 
 ➡️ *Thông tin tất cả Chương trình đào tạo được trả về Client*
 
 [**src/main/webapp/app/entities/chuong-trinh-dao-tao/list/chuong-trinh-dao-tao.component.ts**]()
+
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/13.png)
 - Là nơi chứa các hàm xử lý các sự kiện(event), xử lý logic chung cho Quản lý Chương trình đào tạo
 - Biến ```chuongTrinhDaoTaos``` lưu thông tin tất cả Chương trình đào tạo
 
 ➡️ *Truyền thông tin tất cả Chương trình đào tạo cho việc hiển thị với người dùng*
 
 [**src/main/webapp/app/entities/chuong-trinh-dao-tao/list/chuong-trinh-dao-tao.component.html**]()
+
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/14.png)
 - Là giao diện chính của Quản lý Chương trình đào tạo
 - Sử dụng ```chuongTrinhDaoTao.[attributes]``` để truyền dữ liệu vào danh sách Chương trình đào tạo
 
