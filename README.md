@@ -229,22 +229,27 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 
 ![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/8.png)
 - Nơi chứa các mã nguồn, các yêu cầu ánh xạ cho các phương thức dùng chung cho Quản lý Chương trình đào tạo
-- Hàm ```createChuongTrinhDaoTao()``` lưu thông tin Chương trình đào tạo
+- Hàm ```createChuongTrinhDaoTao()``` : tạo và lưu thông tin Chương trình đào tạo
+- ```@RequestBody```: đây là nơi chứa data chính để gửi lên. Thường thì request body sẽ ở dạng JSON hoặc form-data, khi vào controller sẽ được tự động parse ra thành Object.
+- ```URI``` : xác định tài tài nguyên bởi chính xác nơi lấy nó hoặc tên của nó.
 
 ➡️ *Yêu cầu khởi tạo đối tượng Chương trình đào tạo*
 
 [**src/main/java/vn/vnpt/his/repository/ChuongTrinhDaoTaoRepository.java**]()
 
 ![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/15.png)
-- Kho lưu trữ Spring Data SQL cho thực thể Chương trình đào tạo
+- Kho lưu trữ Spring Data SQL cho thực thể Chương trình đào tạo.
+- ```@SuppressWarnings``` : Thông báo cho trình biên dịch biết là không được in các câu cảnh báo nào đó.  
+- ```@Repository``` là để áp dụng trên các DAO (Data Access Object) class dùng để thao tác với database.
 
 ➡️ *Yêu cầu khởi tạo đối tượng Chương trình đào tạo*
 
 [**src/main/java/vn/vnpt/his/domain/ChuongTrinhDaoTao.java**]()
 
 ![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/9.png)
-- Chứa các thuộc tính của thực thể Chương trình đào tạo
-- Khởi tạo đối tượng Chương trình đào tạo
+- Khởi tạo đối tượng Chương trình đào tạo.
+- Chứa các thuộc tính của đối tượng Chương trình đào tạo.
+- ```getId()``` dùng để lấy giá trị thuộc tính id trong ChuongTrinhDaoTao.
 
 ➡️ *Client thực hiện tải lại trang web(Load Page)*
 
