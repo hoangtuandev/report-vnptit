@@ -188,7 +188,7 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 ![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/2.png)
 - Là nơi chứa các Route, với mỗi "đường dẫn"(path) các component tương ứng sẽ được render
 - Với ```Routes = { path: '/chuong-trinh-dao-tao/new' }```, component ChuongTrinhDaoTaoUpdate sẽ được render.
-- [**NODE: **]() canActivate
+- [**NODE:**]() canActivate
 
 ➡️ *Form nhập thông tin Chương trình đào tạo mới được hiển thị*
 
