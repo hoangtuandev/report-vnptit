@@ -230,7 +230,7 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 - Nơi chứa các mã nguồn, các yêu cầu ánh xạ cho các phương thức dùng chung cho Quản lý Chương trình đào tạo
 - Hàm ```createChuongTrinhDaoTao()``` : tạo và lưu thông tin Chương trình đào tạo
 - ```@RequestBody```: đây là nơi chứa data chính để gửi lên. Thường thì request body sẽ ở dạng JSON hoặc form-data, khi vào controller sẽ được tự động parse ra thành Object.
-- ```URI``` : xác định tài tài nguyên bởi chính xác nơi lấy nó hoặc tên của nó.
+- ```URI``` : xác định tài nguyên bởi chính xác nơi lấy nó hoặc tên của nó.
 
 ➡️ *Yêu cầu khởi tạo đối tượng Chương trình đào tạo*
 
