@@ -395,7 +395,7 @@ REST APIs có một URL cơ sở mà các đường dẫn điểm cuối đượ
 
 - Chúng ta cần phân biệt giữa ***Domain model*** và ***DTO*** để tránh nhầm lẫn. ***Domain model*** là các ```Entity class``` dùng để ánh xạ một table trong database còn ***DTO*** là một ```object``` kết hợp nhiều tham số thành một đặt trong một DTO class.
 
-![](https://shareprogramming.net/wp-content/uploads/2021/09/layers-4.svg)
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/Presentation%20Layers.jpg)
 ➡️ **DTO** là một cấu trúc dữ liệu phẳng và không chứa business logic trong đó chỉ dùng để lưu trữ dữ liệu, các method cho phép cập dữ liệu và sử dụng trong quá trình serialization or deserialization. Dữ liệu được ánh xạ từ domain model sang DTO và ngược lại thông qua một thành phần gọi là Mapper được đặt trong presentation hoặc facade layer.
 
 ### 🎋 **MAPPER**
