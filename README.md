@@ -314,7 +314,9 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 ❄️ Chức năng [**Thêm mới hoặc cập nhật chương trình đào tạo**]()
 
 ![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/ThemCTDT.jpg)
-➡️ Thêm mới hoặc cập nhật chương trình đào tạo bao gồm các thuộc tính Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Địa điểm, Số buổi học, Đã duyệt, Nội dung và có khoá ngoại là Đối tượng. Trong đó, có hai thuộc tính là Tên chương trình và Đã duyệt là bắt buộc nhập.
+➡️ Thêm mới hoặc cập nhật chương trình đào tạo bao gồm các thuộc tính Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Địa điểm, Số buổi học, Đã duyệt, Nội dung và có khoá ngoại là Đối tượng. 
+
+➡️ Trong đó, có hai thuộc tính là Tên chương trình và Đã duyệt là bắt buộc nhập.
 
 ❄️ Chức năng [**Xoá chương trình đào tạo**]()
 
@@ -329,9 +331,25 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 ❄️ Chức năng [**Tìm kiếm**]()
 
 ![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/TimKiemCTDT.jpg)
-➡️ Tìm kiếm bao gồm các thuộc tính Từ ngày, Đến ngày, Địa điểm, Mã đào tạo và Tên đào tạo. Khi ```Tìm kiếm```, chúng ta có thể nhập dữ liệu cho một hoặc nhiều thuộc tính để tiến hành tìm kiếm. Nếu muốn hiển thị lại danh sách chương trình đào tạo, ta sẽ click vào nút ```Tất cả``` thì sẽ hiển thị lại danh sách.
+➡️ Tìm kiếm bao gồm các thuộc tính Từ ngày, Đến ngày, Địa điểm, Mã đào tạo và Tên đào tạo. Khi ```Tìm kiếm```, chúng ta có thể nhập dữ liệu cho một hoặc nhiều thuộc tính để tiến hành tìm kiếm.
+
+➡️ Nếu muốn hiển thị lại danh sách chương trình đào tạo, ta sẽ click vào nút ```Tất cả``` thì sẽ hiển thị lại danh sách.
 
 ❄️ Chức năng [**Xuất file danh sách**]()
 
 ![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/XuatFileDSCTDT.jpg)
 ➡️ Khi click vào nút ```Xuất file danh sách``` thì chúng ta sẽ xuất được một file excel với đầy đủ thông tin của tất cả chương trình đào tạo.
+
+❄️ Chức năng [**Duyệt chương trình đào tạo**]()
+
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/DuyetCTDT.jpg)
+➡️ Khi click vào nút ```Duyệt khoá đào tạo``` thì sẽ hiển thị được danh sách chứa các chương trình đào tạo chưa được duyệt.
+
+➡️ Muốn duyệt một chương trình đào tạo nào đó, ta chỉ cần check vào checkbox thì nó sẽ chuyển sang trạng thái là ```"Đã duyệt"```.
+
+➡️ Nếu không muốn duyệt nữa, ta có thể check lại vào ô checkbox để loại bỏ thao tác và trạng thái sẽ được chuyển lại là ```"Chưa duyệt"```.
+
+➡️ Sau đó ta chỉ cần click lại vào nút ```Duyệt khoá đào tạo``` là được.
+
+### 🎃 
+
