@@ -232,6 +232,8 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 - Hàm ```createChuongTrinhDaoTao()``` : tạo và lưu thông tin Chương trình đào tạo
 - ```@RequestBody```: đây là nơi chứa data chính để gửi lên. Thường thì request body sẽ ở dạng JSON hoặc form-data, khi vào controller sẽ được tự động parse ra thành Object.
 - ```URI``` : xác định tài nguyên bởi chính xác nơi lấy nó hoặc tên của nó.
+- ```.created``` tạo link chứa URI ResponseEntity với trạng thái HTTP. Ví dụ như 201 là tạo thành công, còn 400 là Bad Request nếu id đã tồn tại.
+- ```.headers``` 
 
 ➡️ *Yêu cầu khởi tạo đối tượng Chương trình đào tạo*
 
@@ -300,3 +302,35 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 - Sử dụng ```chuongTrinhDaoTao.[attributes]``` để truyền dữ liệu vào danh sách Chương trình đào tạo
 
 ➡️ *Danh sách thông tin tất cả Chương trình đào tạo được hiển thị trên giao diện người dùng*
+
+## **[TUẦN 5: 14/06/2022 - 26/06/2022](https://github.com/hoangtuandev/report-vnptit)**
+
+### ☀️GIAO DIỆN QUẢN LÝ ĐÀO TẠO
+
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/GD_CTDT.jpg)
+➡️ Chương trình đào tạo sẽ quản lý danh sách các chương trình đào tạo bao gồm các chức năng như ```Thêm mới hoặc cập nhật chương trình đào tạo```, ```Xoá chương trình đào tạo```, ```Xem thông tin chi tiết chương trình đào tạo```, ```Quản lý học viên```, ```Duyệt khoá đào tạo```, ```Tìm kiếm``` và ```Xuất file danh sách```.
+
+❄️ Chức năng [**Thêm mới hoặc cập nhật chương trình đào tạo**]()
+
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/ThemCTDT.jpg)
+➡️ Thêm mới hoặc cập nhật chương trình đào tạo bao gồm các thuộc tính Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Địa điểm, Số buổi học, Đã duyệt, Nội dung và có khoá ngoại là Đối tượng. Trong đó, có hai thuộc tính là Tên chương trình và Đã duyệt là bắt buộc nhập.
+
+❄️ Chức năng [**Xoá chương trình đào tạo**]()
+
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/XoaCTDT.jpg)
+➡️ Khi click vào icon ❌ thì sẽ hiển thị thông báo xác nhận xoá chương trình đào tạo. Nếu muốn xoá sẽ click vào nút ```Xoá```, còn không muốn xoá nữa sẽ click vào nút ```Huỷ```.
+
+❄️ Chức năng [**Xem thông tin chi tiết chương trình đào tạo**]()
+
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/ViewCTDT.jpg)
+➡️ Khi click vào icon 👀 thì sẽ hiển thị một form chứa đầy đủ thông tin của một Chương trình đào tạo. Khi bạn muốn thoát chỉ cần click vào nút ```Đóng```.
+
+❄️ Chức năng [**Tìm kiếm**]()
+
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/TimKiemCTDT.jpg)
+➡️ Tìm kiếm bao gồm các thuộc tính Từ ngày, Đến ngày, Địa điểm, Mã đào tạo và Tên đào tạo. Khi ```Tìm kiếm```, chúng ta có thể nhập dữ liệu cho một hoặc nhiều thuộc tính để tiến hành tìm kiếm. Nếu muốn hiển thị lại danh sách chương trình đào tạo, ta sẽ click vào nút ```Tất cả``` thì sẽ hiển thị lại danh sách.
+
+❄️ Chức năng [**Xuất file danh sách**]()
+
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/XuatFileDSCTDT.jpg)
+➡️ Khi click vào nút ```Xuất file danh sách``` thì chúng ta sẽ xuất được một file excel với đầy đủ thông tin của tất cả chương trình đào tạo.
