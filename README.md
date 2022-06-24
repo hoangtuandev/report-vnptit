@@ -292,6 +292,7 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 ![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/13.png)
 - Là nơi chứa các hàm xử lý các sự kiện(event), xử lý logic chung cho Quản lý Chương trình đào tạo
 - Biến ```chuongTrinhDaoTaos``` lưu thông tin tất cả Chương trình đào tạo
+- [**NODE:**]() sort()
 
 ➡️ *Truyền thông tin tất cả Chương trình đào tạo cho việc hiển thị với người dùng*
 
