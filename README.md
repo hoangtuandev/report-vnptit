@@ -353,3 +353,71 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 
 ### 🎃 
 
+### 🎐 **SWAGGER**
+
+**Swagger** là một bộ công cụ mã nguồn mở để xây dựng OpenAPI specifications giúp chúng ta có thể thiết kế, xây dựng tài liệu và sử dụng REST APIs.
+
+**Swagger** cung cấp 3 tools chính cho các developers :
+- ***Swagger-Editor*** : dùng để design lên các APIs hoàn toàn mới hoặc edit lại các APIs có sẵn thông qua 1 file config.
+- ***Swagger-Codegen*** : dùng để generate ra code từ các file config có sẵn
+- ***Swagger-UI*** : dùng để generate ra file html,css,… từ 1 file config.
+
+**Cấu trúc cơ bản của file Swagger**
+
+Đầu tiên 1 file swagger có thể viết bằng JSON hoặc YAML.
+
+- ***Metadata:*** Mọi thông số kỹ thuật của Swagger đều bắt đầu với phiên bản Swagger . Phiên bản Swagger xác định cấu trúc tổng thể của đặc tả API - những gì bạn có thể ghi lại và cách bạn ghi lại nó. Ngoài ra các thông tin chi tiết như tiêu đề, mô tả hay version của bản api hiện tại cũng được khai báo tại đây.
+
+- ***Base Url:*** Nơi bạn sẽ định nghĩa host của server, đường dẫn cơ bản cũng như giao thức https hoặc http.
+
+- ***Consumes, Produces:*** xác định các loại MiME được API hỗ trợ.
+
+- ***Paths:*** xác định các điểm cuối riêng lẻ (đường dẫn) trong API của bạn và các phương thức HTTP (hoạt động) được hỗ trợ bởi các điểm cuối này. Và đây là phần quan trọng chứa thông tin API của bạn sẽ như thế nào bằng đường dẫn API, phương thức (GET, POST, PUT...), request (query, path, body..), response API.
+
+REST APIs có một URL cơ sở mà các đường dẫn điểm cuối được nối vào. Đường url này được định nghĩa bởi schema, host, basePath.
+
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/rest_api.png)
+- ***Schema*** là giao thức truyền được API sử dụng. Swagger hỗ trợ 2 giao thức là http và https.
+- ***host*** là tên miền hoặc địa chỉ IP (IPv4) của máy chủ lưu trữ cung cấp API. Nó có thể bao gồm số cổng nếu khác với cổng mặc định của lược đồ (80 cho HTTP và 443 cho HTTPS).
+- ***basePath*** là tiền tố URL cho tất cả các đường dẫn API, liên quan đến gốc máy chủ. Nó phải bắt đầu bằng một dấu gạch chéo /. Nếu basePath không được chỉ định, nó sẽ mặc định là /, nghĩa là, tất cả các đường dẫn đều bắt đầu từ máy chủ gốc.
+
+### 🎍 **DTO** (Data Tranfer Object)
+
+🎏 **DTO** là cấu trúc dữ liệu tối giản thường là class không có method chỉ dùng để truyền dữ liệu giữa các layer và service.
+
+🎏 **DTO** có thể serialize ra JSON hoặc XML hoặc ngược lại từ JSON, XML deserialize thành DTO.
+
+🎏 **DTO** có tác dụng che dấu hoặc lược bỏ những trường nhạy cảm trong table như password.
+
+🎏 Hoặc đôi khi **DTO** là kết quả join từ nhiều bảng.
+
+🎏 Mục đích tạo ra **DTO** là để giảm bớt lượng info không cần thiết phải chuyển đi, và cũng tăng cường độ bảo mật.
+
+- Chúng ta cần phân biệt giữa ***Domain model*** và ***DTO*** để tránh nhầm lẫn. ***Domain model*** là các ```Entity class``` dùng để ánh xạ một table trong database còn ***DTO*** là một ```object``` kết hợp nhiều tham số thành một đặt trong một DTO class.
+
+![](https://shareprogramming.net/wp-content/uploads/2021/09/layers-4.svg)
+➡️ **DTO** là một cấu trúc dữ liệu phẳng và không chứa business logic trong đó chỉ dùng để lưu trữ dữ liệu, các method cho phép cập dữ liệu và sử dụng trong quá trình serialization or deserialization. Dữ liệu được ánh xạ từ domain model sang DTO và ngược lại thông qua một thành phần gọi là Mapper được đặt trong presentation hoặc facade layer.
+
+### 🎋 **MAPPER**
+
+Là lớp trung gian dùng để chuyển đổi qua lại giữa DTO và Domain model.
+
+### 💝**SERVICE**
+
+**Service** là một interface, nó chỉ chứa các phương thức trừu tượng.
+
+Tại đây chúng ta sẽ cần dùng đến ***Mapper*** để chuyển đổi từ ```DTO``` sang ```User```. Tiến hành lưu xuống database và lại dùng Mapper để chuyển đổi User object đã được lưu xuống database sang DTO và trả về cho client.
+
+- ***ServiceImpl:***  kế thừa từ interface Service.
+
+### 🎈 **CONTROLLER**
+
+Tầng này sẽ nhận ***request*** từ client và chuyển xuống cho tầng Service xử lý.
+
+### 🔑 **DAO**
+- DAO là Data Access Object. Một class có những method Create, Update, Delete, Query tác động lên một bảng trong CSDL.
+
+- Tại sao lại có DAO bởi DAO giúp lập trình viên ở tầng Controller và Service không phải bận tâm viết câu lệnh SQL nữa. Hoặc ở một số framework DAO tự động chuyển đổi tên class, property thành câu lệnh SQL tương ứng.
+
+- Nhờ có DAO mà chúng ta có thể viết logic một lần nhưng có thể triển khai trên nhiều loại database khác nhau.
+
