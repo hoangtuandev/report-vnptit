@@ -402,19 +402,8 @@ REST APIs có một URL cơ sở mà các đường dẫn điểm cuối đượ
 
 Là lớp trung gian dùng để chuyển đổi qua lại giữa DTO và Domain model.
 
-### 💝**SERVICE**
 
-**Service** là một interface, nó chỉ chứa các phương thức trừu tượng.
-
-Tại đây chúng ta sẽ cần dùng đến ***Mapper*** để chuyển đổi từ ```DTO``` sang ```User```. Tiến hành lưu xuống database và lại dùng Mapper để chuyển đổi User object đã được lưu xuống database sang DTO và trả về cho client.
-
-- ***ServiceImpl:***  kế thừa từ interface Service.
-
-### 🎈 **CONTROLLER**
-
-Tầng này sẽ nhận ***request*** từ client và chuyển xuống cho tầng Service xử lý.
-
-### 🔑 **DAO**
+### 🎈 **DAO**
 - DAO là Data Access Object. Một class có những method Create, Update, Delete, Query tác động lên một bảng trong CSDL.
 
 - Tại sao lại có DAO bởi DAO giúp lập trình viên ở tầng Controller và Service không phải bận tâm viết câu lệnh SQL nữa. Hoặc ở một số framework DAO tự động chuyển đổi tên class, property thành câu lệnh SQL tương ứng.
@@ -659,42 +648,6 @@ public class ChuongTrinhDaoTaoQueryService extends QueryService<ChuongTrinhDaoTa
                         )
                     );
             }
-            if (criteria.getLichDaoTaoId() != null) {
-                specification =
-                    specification.and(
-                        buildSpecification(
-                            criteria.getLichDaoTaoId(),
-                            root -> root.join(ChuongTrinhDaoTao_.lichDaoTaos, JoinType.LEFT).get(LichDaoTao_.id)
-                        )
-                    );
-            }
-            if (criteria.getPhieuDanhGiaId() != null) {
-                specification =
-                    specification.and(
-                        buildSpecification(
-                            criteria.getPhieuDanhGiaId(),
-                            root -> root.join(ChuongTrinhDaoTao_.phieuDanhGias, JoinType.LEFT).get(PhieuDanhGia_.id)
-                        )
-                    );
-            }
-            if (criteria.getPhieuThanhToanHocPhiId() != null) {
-                specification =
-                    specification.and(
-                        buildSpecification(
-                            criteria.getPhieuThanhToanHocPhiId(),
-                            root -> root.join(ChuongTrinhDaoTao_.phieuThanhToanHocPhis, JoinType.LEFT).get(PhieuThanhToanHocPhi_.id)
-                        )
-                    );
-            }
-            if (criteria.getDuToanId() != null) {
-                specification =
-                    specification.and(
-                        buildSpecification(
-                            criteria.getDuToanId(),
-                            root -> root.join(ChuongTrinhDaoTao_.duToans, JoinType.LEFT).get(DuToan_.id)
-                        )
-                    );
-            }
             if (criteria.getDoiTuongId() != null) {
                 specification =
                     specification.and(
@@ -869,6 +822,8 @@ public class ChuongTrinhDaoTaoServiceImpl implements ChuongTrinhDaoTaoService {
 }
 ```
 ### **7. Resource(Controller)**
+
+Tầng này sẽ nhận ***request*** từ client và chuyển xuống cho tầng Service xử lý.
 
 ```java
 /**
