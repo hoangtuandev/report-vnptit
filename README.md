@@ -188,7 +188,7 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 ![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/2.png)
 - Là nơi chứa các Route, với mỗi "đường dẫn"(path) các component tương ứng sẽ được render
 - Với ```Routes = { path: '/chuong-trinh-dao-tao/new' }```, component ChuongTrinhDaoTaoUpdate sẽ được render.
-- [**NODE:**]() canActivate
+- [**NOTE:**]() canActivate
 
 ➡️ *Form nhập thông tin Chương trình đào tạo mới được hiển thị*
 
@@ -421,3 +421,631 @@ Tầng này sẽ nhận ***request*** từ client và chuyển xuống cho tần
 
 - Nhờ có DAO mà chúng ta có thể viết logic một lần nhưng có thể triển khai trên nhiều loại database khác nhau.
 
+### 🔆**HIBERNATE**
+🔮 **Hibernate** là một thư viện ORM (Object Relational Mapping) mã nguồn mở giúp lập trình viên viết ứng dụng Java có thể map các objects (pojo) với hệ quản trị cơ sở dữ liệu quan hệ, và hỗ trợ thực hiện các khái niệm lập trình hướng đối tượng với cớ dữ liệu quan hệ.
+
+🔮 Hiểu ngắn gọn thì Hibernate sẽ là một layer đứng trung gian giữa ứng dụng và database, và chúng ta sẽ giao tiếp với Hibernate thay vì giao tiếp với database
+### **1. Domain**
+
+```java
+/**
+ * A ChuongTrinhDaoTao.
+ */
+@Entity     // Đánh dấu đây là một Entity, chịu sự quản lý của Hibernate
+@Table(name = "chuong_trinh_dao_tao")   // Entity này đại diện cho table chuong_trinh_dao_tao trong db
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+public class ChuongTrinhDaoTao implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @Id // Đánh dấu biến ở dưới là primary key của table này
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
+    @SequenceGenerator(name = "sequenceGenerator")
+    @Column(name = "id")    // trường id ở dưới đại diện cho cột id trong database
+    private Long id;
+
+    @NotNull    // Thiết lập cột không được nhận giá trị NULL
+    @Column(name = "ten_chuong_trinh", nullable = false)    // trường tenChuongTrinh ở dưới đại diện cho cột ten_chuong_trinh trong database
+    private String tenChuongTrinh;
+
+    @Column(name = "ngay_bat_dau")
+    private Instant ngayBatDau;
+
+    @Column(name = "ngay_ket_thuc")
+    private Instant ngayKetThuc;
+
+    @Column(name = "dia_diem")
+    private String diaDiem;
+
+    @Column(name = "noi_dung")
+    private String noiDung;
+
+    @Column(name = "so_buoi_hoc")
+    private Integer soBuoiHoc;
+
+    @NotNull
+    @Enumerated(EnumType.STRING)    //sẽ chuyển đổi giá trị của enum sang string để lưu xuống database.
+    @Column(name = "da_duyet", nullable = false)
+    private TrangThaiDuyet daDuyet;
+
+    @OneToMany(mappedBy = "chuongTrinhDaoTao")
+    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+    @JsonIgnoreProperties(value = { "chuongTrinhDaoTao", "danhMucChungChi", "nhanViens" }, allowSetters = true) // dùng để loại bỏ các thuộc tính
+    private Set<ChungChi> chungChis = new HashSet<>();
+```
+``@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)``
+- ***READ_WRITE:*** Cơ chế này đảm bảo tính nhất quán dữ liệu cao bằng việc sử dụng 'soft lock`. Khi một thực thể đã được cache bị update, một 'soft lock' được lưu lại trong cache cho entity và nó sẽ được giải phóng (release) khi transaction được commit. Tất cả các transaction nếu truy cập vào các đối tượng đang bị softblock sẽ được lấy trực tiếp từ cơ sở dữ liệu.
+
+### **2. Respository**
+
+```java
+/**
+ * Spring Data SQL repository for the ChuongTrinhDaoTao entity.
+ */
+@SuppressWarnings("unused")
+@Repository // Đánh dấu một Class Là tầng Repository, phục vụ truy xuất dữ liệu.
+public interface ChuongTrinhDaoTaoRepository extends JpaRepository<ChuongTrinhDaoTao, Long>, JpaSpecificationExecutor<ChuongTrinhDaoTao> {}
+```
+- ```@SuppressWarnings``` : Thông báo cho trình biên dịch biết là không được in các câu cảnh báo nào đó.  Cụ thể ở đây là ***"unused"***.
+- ```@Repository``` là để áp dụng trên các DAO (Data Access Object) class dùng để thao tác với database. Repository là 1 kho lưu trữ, truy xuất dữ liệu trung gian giữa các entity và database.
+
+➡️ ChuongTrinhDaoTaoRepository là một interface, chỉ chứa các phương thức trừu tượng.
+
+➡️ ChuongTrinhDaoTaoRepository kế thừa từ lớp JpaRepository và lớp JpaSpecificationExecutor.
+
+### **3.Criteria**
+
+- ``Criteria`` là 1 class sử dụng thư viên criteria do jhipster hỗ trợ. Các thuộc tính sẽ tương ứng với các thuộc tính trong DTo
+nhưng kiểu dữ liệu sẽ kèm theo ``Filer`` ví dụ: ``Long = LongFilter``
+- Các Filter sẽ hỗ trợ tùy theo như ``setEquals, setContains(StringFilter), greaterThanOrEquals(LocalDateFilter, ZonedDateTimeFilter)...``
+các thuộc tính này sẽ được sử dụng trong phần ``createSpecification`` ở QueryService để build các câu truy vấn sẽ được đề cấp sau đây
+
+```java
+/**
+ * Criteria class for the {@link vn.vnpt.his.domain.ChuongTrinhDaoTao} entity. This class is used
+ * in {@link vn.vnpt.his.web.rest.ChuongTrinhDaoTaoResource} to receive all the possible filtering options from
+ * the Http GET request parameters.
+ * For example the following could be a valid request:
+ * {@code /chuong-trinh-dao-taos?id.greaterThan=5&attr1.contains=something&attr2.specified=false}
+ * As Spring is unable to properly convert the types, unless specific {@link Filter} class are used, we need to use
+ * fix type specific filters.
+ */
+@ParameterObject
+public class ChuongTrinhDaoTaoCriteria implements Serializable, Criteria {
+
+    /**
+     * Class for filtering TrangThaiDuyet
+     */
+    public static class TrangThaiDuyetFilter extends Filter<TrangThaiDuyet> {
+
+        public TrangThaiDuyetFilter() {}
+
+        public TrangThaiDuyetFilter(TrangThaiDuyetFilter filter) {
+            super(filter);
+        }
+
+        @Override
+        public TrangThaiDuyetFilter copy() {
+            return new TrangThaiDuyetFilter(this);
+        }
+    }
+
+    private static final long serialVersionUID = 1L;
+
+    private LongFilter id;
+
+    private StringFilter tenChuongTrinh;
+
+    private InstantFilter ngayBatDau;
+
+    private InstantFilter ngayKetThuc;
+
+    private StringFilter diaDiem;
+
+    private StringFilter noiDung;
+
+    private IntegerFilter soBuoiHoc;
+
+    private TrangThaiDuyetFilter daDuyet;
+
+    private LongFilter chungChiId;
+
+    private LongFilter lichDaoTaoId;
+
+    private LongFilter phieuDanhGiaId;
+
+    private LongFilter phieuThanhToanHocPhiId;
+
+    private LongFilter duToanId;
+
+    private LongFilter doiTuongId;
+
+    private LongFilter hocVienId;
+
+    private Boolean distinct;
+
+    public ChuongTrinhDaoTaoCriteria() {}
+
+    public ChuongTrinhDaoTaoCriteria(ChuongTrinhDaoTaoCriteria other) {
+        this.id = other.id == null ? null : other.id.copy();
+        this.tenChuongTrinh = other.tenChuongTrinh == null ? null : other.tenChuongTrinh.copy();
+        this.ngayBatDau = other.ngayBatDau == null ? null : other.ngayBatDau.copy();
+        this.ngayKetThuc = other.ngayKetThuc == null ? null : other.ngayKetThuc.copy();
+        this.diaDiem = other.diaDiem == null ? null : other.diaDiem.copy();
+        this.noiDung = other.noiDung == null ? null : other.noiDung.copy();
+        this.soBuoiHoc = other.soBuoiHoc == null ? null : other.soBuoiHoc.copy();
+        this.daDuyet = other.daDuyet == null ? null : other.daDuyet.copy();
+        this.chungChiId = other.chungChiId == null ? null : other.chungChiId.copy();
+        this.lichDaoTaoId = other.lichDaoTaoId == null ? null : other.lichDaoTaoId.copy();
+        this.phieuDanhGiaId = other.phieuDanhGiaId == null ? null : other.phieuDanhGiaId.copy();
+        this.phieuThanhToanHocPhiId = other.phieuThanhToanHocPhiId == null ? null : other.phieuThanhToanHocPhiId.copy();
+        this.duToanId = other.duToanId == null ? null : other.duToanId.copy();
+        this.doiTuongId = other.doiTuongId == null ? null : other.doiTuongId.copy();
+        this.hocVienId = other.hocVienId == null ? null : other.hocVienId.copy();
+        this.distinct = other.distinct;
+    }
+    //Getter, setter, equals, hasCode, toString
+```
+### **4. QueryService**
+
+```java
+/**
+ * Service for executing complex queries for {@link ChuongTrinhDaoTao} entities in the database.
+ * The main input is a {@link ChuongTrinhDaoTaoCriteria} which gets converted to {@link Specification},
+ * in a way that all the filters must apply.
+ * It returns a {@link List} of {@link ChuongTrinhDaoTao} or a {@link Page} of {@link ChuongTrinhDaoTao} which fulfills the criteria.
+ */
+@Service    //Đánh dấu một Class là tầng Service, phục vụ các logic nghiệp vụ.
+@Transactional(readOnly = true)
+public class ChuongTrinhDaoTaoQueryService extends QueryService<ChuongTrinhDaoTao> {
+
+    private final Logger log = LoggerFactory.getLogger(ChuongTrinhDaoTaoQueryService.class);
+
+    private final ChuongTrinhDaoTaoRepository chuongTrinhDaoTaoRepository;
+
+    public ChuongTrinhDaoTaoQueryService(ChuongTrinhDaoTaoRepository chuongTrinhDaoTaoRepository) {
+        this.chuongTrinhDaoTaoRepository = chuongTrinhDaoTaoRepository;
+    }
+
+    /**
+     * Return a {@link List} of {@link ChuongTrinhDaoTao} which matches the criteria from the database.
+     * @param criteria The object which holds all the filters, which the entities should match.
+     * @return the matching entities.
+     */
+    @Transactional(readOnly = true)
+    public List<ChuongTrinhDaoTao> findByCriteria(ChuongTrinhDaoTaoCriteria criteria) {
+        log.debug("find by criteria : {}", criteria);
+        final Specification<ChuongTrinhDaoTao> specification = createSpecification(criteria);
+        return chuongTrinhDaoTaoRepository.findAll(specification);
+    }
+    protected Specification<ChuongTrinhDaoTao> createSpecification(ChuongTrinhDaoTaoCriteria criteria) {
+        Specification<ChuongTrinhDaoTao> specification = Specification.where(null);
+        if (criteria != null) {
+            // This has to be called first, because the distinct method returns null
+            if (criteria.getDistinct() != null) {
+                specification = specification.and(distinct(criteria.getDistinct()));
+            }
+            if (criteria.getId() != null) {
+                specification = specification.and(buildRangeSpecification(criteria.getId(), ChuongTrinhDaoTao_.id));
+            }
+            if (criteria.getTenChuongTrinh() != null) {
+                specification =
+                    specification.and(buildStringSpecification(criteria.getTenChuongTrinh(), ChuongTrinhDaoTao_.tenChuongTrinh));
+            }
+            if (criteria.getNgayBatDau() != null) {
+                specification = specification.and(buildRangeSpecification(criteria.getNgayBatDau(), ChuongTrinhDaoTao_.ngayBatDau));
+            }
+            if (criteria.getNgayKetThuc() != null) {
+                specification = specification.and(buildRangeSpecification(criteria.getNgayKetThuc(), ChuongTrinhDaoTao_.ngayKetThuc));
+            }
+            if (criteria.getDiaDiem() != null) {
+                specification = specification.and(buildStringSpecification(criteria.getDiaDiem(), ChuongTrinhDaoTao_.diaDiem));
+            }
+            if (criteria.getNoiDung() != null) {
+                specification = specification.and(buildStringSpecification(criteria.getNoiDung(), ChuongTrinhDaoTao_.noiDung));
+            }
+            if (criteria.getSoBuoiHoc() != null) {
+                specification = specification.and(buildRangeSpecification(criteria.getSoBuoiHoc(), ChuongTrinhDaoTao_.soBuoiHoc));
+            }
+            if (criteria.getDaDuyet() != null) {
+                specification = specification.and(buildSpecification(criteria.getDaDuyet(), ChuongTrinhDaoTao_.daDuyet));
+            }
+            if (criteria.getChungChiId() != null) {
+                specification =
+                    specification.and(
+                        buildSpecification(
+                            criteria.getChungChiId(),
+                            root -> root.join(ChuongTrinhDaoTao_.chungChis, JoinType.LEFT).get(ChungChi_.id)
+                        )
+                    );
+            }
+            if (criteria.getLichDaoTaoId() != null) {
+                specification =
+                    specification.and(
+                        buildSpecification(
+                            criteria.getLichDaoTaoId(),
+                            root -> root.join(ChuongTrinhDaoTao_.lichDaoTaos, JoinType.LEFT).get(LichDaoTao_.id)
+                        )
+                    );
+            }
+            if (criteria.getPhieuDanhGiaId() != null) {
+                specification =
+                    specification.and(
+                        buildSpecification(
+                            criteria.getPhieuDanhGiaId(),
+                            root -> root.join(ChuongTrinhDaoTao_.phieuDanhGias, JoinType.LEFT).get(PhieuDanhGia_.id)
+                        )
+                    );
+            }
+            if (criteria.getPhieuThanhToanHocPhiId() != null) {
+                specification =
+                    specification.and(
+                        buildSpecification(
+                            criteria.getPhieuThanhToanHocPhiId(),
+                            root -> root.join(ChuongTrinhDaoTao_.phieuThanhToanHocPhis, JoinType.LEFT).get(PhieuThanhToanHocPhi_.id)
+                        )
+                    );
+            }
+            if (criteria.getDuToanId() != null) {
+                specification =
+                    specification.and(
+                        buildSpecification(
+                            criteria.getDuToanId(),
+                            root -> root.join(ChuongTrinhDaoTao_.duToans, JoinType.LEFT).get(DuToan_.id)
+                        )
+                    );
+            }
+            if (criteria.getDoiTuongId() != null) {
+                specification =
+                    specification.and(
+                        buildSpecification(
+                            criteria.getDoiTuongId(),
+                            root -> root.join(ChuongTrinhDaoTao_.doiTuong, JoinType.LEFT).get(DoiTuong_.id)
+                        )
+                    );
+            }
+            if (criteria.getHocVienId() != null) {
+                specification =
+                    specification.and(
+                        buildSpecification(
+                            criteria.getHocVienId(),
+                            root -> root.join(ChuongTrinhDaoTao_.hocViens, JoinType.LEFT).get(HocVien_.id)
+                        )
+                    );
+            }
+        }
+        return specification;
+    }
+```
+- ``Specificaion`` là một cách để định nghĩa các ``Predicate``(một mệnh đề điều kiện trong câu lệnh truy vấn.) có thể tái sử dụng được. Bản chất ``Specificaion`` là một function interface với 1 hàm duy nhất.
+    - ``Specification.where()`` để xây dựng cho mình tập các điều kiện để query.
+    - ``root``: root là khai báo đối tượng bạn sẽ sử dụng trong query, tương đương với đối tượng sau mệnh đề ``FROM``.
+    - Một ``Specification<TenEntity>`` sẽ được sử dụng trong Repository với hàm ``findAll()``.
+    - Có thể ghép nhiều ``Specification`` lại với nhau thông qua ``.and`` hoặc ``.or``  
+### **5. Service**
+
+```java
+/**
+ * Service Interface for managing {@link ChuongTrinhDaoTao}.
+ */
+public interface ChuongTrinhDaoTaoService {
+    /**
+     * Save a chuongTrinhDaoTao.
+     *
+     * @param chuongTrinhDaoTao the entity to save.
+     * @return the persisted entity.
+     */
+    ChuongTrinhDaoTao save(ChuongTrinhDaoTao chuongTrinhDaoTao);
+
+    /**
+     * Updates a chuongTrinhDaoTao.
+     *
+     * @param chuongTrinhDaoTao the entity to update.
+     * @return the persisted entity.
+     */
+    ChuongTrinhDaoTao update(ChuongTrinhDaoTao chuongTrinhDaoTao);
+
+    /**
+     * Partially updates a chuongTrinhDaoTao.
+     *
+     * @param chuongTrinhDaoTao the entity to update partially.
+     * @return the persisted entity.
+     */
+    Optional<ChuongTrinhDaoTao> partialUpdate(ChuongTrinhDaoTao chuongTrinhDaoTao);
+
+    /**
+     * Get all the chuongTrinhDaoTaos.
+     *
+     * @param pageable the pagination information.
+     * @return the list of entities.
+     */
+    Page<ChuongTrinhDaoTao> findAll(Pageable pageable);
+
+    /**
+     * Get the "id" chuongTrinhDaoTao.
+     *
+     * @param id the id of the entity.
+     * @return the entity.
+     */
+    Optional<ChuongTrinhDaoTao> findOne(Long id);
+
+    /**
+     * Delete the "id" chuongTrinhDaoTao.
+     *
+     * @param id the id of the entity.
+     */
+    void delete(Long id);
+}
+```
+**Service** là một interface, nó chỉ chứa các phương thức trừu tượng.
+
+Tại đây chúng ta sẽ cần dùng đến ***Mapper*** để chuyển đổi từ ```DTO``` sang ```User```. Tiến hành lưu xuống database và lại dùng Mapper để chuyển đổi User object đã được lưu xuống database sang DTO và trả về cho client.
+
+### **6. ServiceImpl**
+
+- ***ServiceImpl:***  kế thừa từ interface Service.
+
+```java
+/**
+ * Service Implementation for managing {@link ChuongTrinhDaoTao}.
+ */
+@Service    // Đánh dấu một Class là tầng Service, phục vụ các logic nghiệp vụ.
+@Transactional
+public class ChuongTrinhDaoTaoServiceImpl implements ChuongTrinhDaoTaoService {
+
+    private final Logger log = LoggerFactory.getLogger(ChuongTrinhDaoTaoServiceImpl.class);
+
+    private final ChuongTrinhDaoTaoRepository chuongTrinhDaoTaoRepository;
+
+    public ChuongTrinhDaoTaoServiceImpl(ChuongTrinhDaoTaoRepository chuongTrinhDaoTaoRepository) {
+        this.chuongTrinhDaoTaoRepository = chuongTrinhDaoTaoRepository;
+    }
+
+    @Override
+    public ChuongTrinhDaoTao save(ChuongTrinhDaoTao chuongTrinhDaoTao) {
+        log.debug("Request to save ChuongTrinhDaoTao : {}", chuongTrinhDaoTao);
+        return chuongTrinhDaoTaoRepository.save(chuongTrinhDaoTao);
+    }
+
+    @Override
+    public ChuongTrinhDaoTao update(ChuongTrinhDaoTao chuongTrinhDaoTao) {
+        log.debug("Request to save ChuongTrinhDaoTao : {}", chuongTrinhDaoTao);
+        return chuongTrinhDaoTaoRepository.save(chuongTrinhDaoTao);
+    }
+
+    @Override
+    public Optional<ChuongTrinhDaoTao> partialUpdate(ChuongTrinhDaoTao chuongTrinhDaoTao) {
+        log.debug("Request to partially update ChuongTrinhDaoTao : {}", chuongTrinhDaoTao);
+
+        return chuongTrinhDaoTaoRepository
+            .findById(chuongTrinhDaoTao.getId())
+            .map(existingChuongTrinhDaoTao -> {
+                if (chuongTrinhDaoTao.getTenChuongTrinh() != null) {
+                    existingChuongTrinhDaoTao.setTenChuongTrinh(chuongTrinhDaoTao.getTenChuongTrinh());
+                }
+                if (chuongTrinhDaoTao.getNgayBatDau() != null) {
+                    existingChuongTrinhDaoTao.setNgayBatDau(chuongTrinhDaoTao.getNgayBatDau());
+                }
+                if (chuongTrinhDaoTao.getNgayKetThuc() != null) {
+                    existingChuongTrinhDaoTao.setNgayKetThuc(chuongTrinhDaoTao.getNgayKetThuc());
+                }
+                if (chuongTrinhDaoTao.getDiaDiem() != null) {
+                    existingChuongTrinhDaoTao.setDiaDiem(chuongTrinhDaoTao.getDiaDiem());
+                }
+                if (chuongTrinhDaoTao.getNoiDung() != null) {
+                    existingChuongTrinhDaoTao.setNoiDung(chuongTrinhDaoTao.getNoiDung());
+                }
+                if (chuongTrinhDaoTao.getSoBuoiHoc() != null) {
+                    existingChuongTrinhDaoTao.setSoBuoiHoc(chuongTrinhDaoTao.getSoBuoiHoc());
+                }
+                if (chuongTrinhDaoTao.getDaDuyet() != null) {
+                    existingChuongTrinhDaoTao.setDaDuyet(chuongTrinhDaoTao.getDaDuyet());
+                }
+
+                return existingChuongTrinhDaoTao;
+            })
+            .map(chuongTrinhDaoTaoRepository::save);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Page<ChuongTrinhDaoTao> findAll(Pageable pageable) {
+        log.debug("Request to get all ChuongTrinhDaoTaos");
+        return chuongTrinhDaoTaoRepository.findAll(pageable);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Optional<ChuongTrinhDaoTao> findOne(Long id) {
+        log.debug("Request to get ChuongTrinhDaoTao : {}", id);
+        return chuongTrinhDaoTaoRepository.findById(id);
+    }
+
+    @Override
+    public void delete(Long id) {
+        log.debug("Request to delete ChuongTrinhDaoTao : {}", id);
+        chuongTrinhDaoTaoRepository.deleteById(id);
+    }
+}
+```
+### **7. Resource(Controller)**
+
+```java
+/**
+ * REST controller for managing {@link vn.vnpt.his.domain.ChuongTrinhDaoTao}.
+ */
+@RestController
+@RequestMapping("/api")
+public class ChuongTrinhDaoTaoResource {
+
+    private final Logger log = LoggerFactory.getLogger(ChuongTrinhDaoTaoResource.class);
+
+    private static final String ENTITY_NAME = "chuongTrinhDaoTao";
+
+    @Value("${jhipster.clientApp.name}")
+    private String applicationName;
+
+    private final ChuongTrinhDaoTaoService chuongTrinhDaoTaoService;
+
+    private final ChuongTrinhDaoTaoRepository chuongTrinhDaoTaoRepository;
+
+    private final ChuongTrinhDaoTaoQueryService chuongTrinhDaoTaoQueryService;
+
+    public ChuongTrinhDaoTaoResource(
+        ChuongTrinhDaoTaoService chuongTrinhDaoTaoService,
+        ChuongTrinhDaoTaoRepository chuongTrinhDaoTaoRepository,
+        ChuongTrinhDaoTaoQueryService chuongTrinhDaoTaoQueryService
+    ) {
+        this.chuongTrinhDaoTaoService = chuongTrinhDaoTaoService;
+        this.chuongTrinhDaoTaoRepository = chuongTrinhDaoTaoRepository;
+        this.chuongTrinhDaoTaoQueryService = chuongTrinhDaoTaoQueryService;
+    }
+
+    /**
+     * {@code POST  /chuong-trinh-dao-taos} : Create a new chuongTrinhDaoTao.
+     *
+     * @param chuongTrinhDaoTao the chuongTrinhDaoTao to create.
+     * @return the {@link ResponseEntity} with status {@code 201 (Created)} and with
+     *         body the new chuongTrinhDaoTao, or with status
+     *         {@code 400 (Bad Request)} if the chuongTrinhDaoTao has already an ID.
+     * @throws URISyntaxException if the Location URI syntax is incorrect.
+     */
+    @PostMapping("/chuong-trinh-dao-taos")
+    public ResponseEntity<ChuongTrinhDaoTao> createChuongTrinhDaoTao(@Valid @RequestBody ChuongTrinhDaoTao chuongTrinhDaoTao)
+        throws URISyntaxException {
+        log.debug("REST request to save ChuongTrinhDaoTao : {}", chuongTrinhDaoTao);
+        if (chuongTrinhDaoTao.getId() != null) {
+            throw new BadRequestAlertException("A new chuongTrinhDaoTao cannot already have an ID", ENTITY_NAME, "idexists");
+        }
+        ChuongTrinhDaoTao result = chuongTrinhDaoTaoService.save(chuongTrinhDaoTao);
+        return ResponseEntity
+            .created(new URI("/api/chuong-trinh-dao-taos/" + result.getId()))
+            .headers(HeaderUtil.createEntityCreationAlert(applicationName, true, ENTITY_NAME, result.getId().toString()))
+            .body(result);
+    }
+
+    /**
+     * {@code PUT  /chuong-trinh-dao-taos/:id} : Updates an existing
+     * chuongTrinhDaoTao.
+     *
+     * @param id                the id of the chuongTrinhDaoTao to save.
+     * @param chuongTrinhDaoTao the chuongTrinhDaoTao to update.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body
+     *         the updated chuongTrinhDaoTao,
+     *         or with status {@code 400 (Bad Request)} if the chuongTrinhDaoTao is
+     *         not valid,
+     *         or with status {@code 500 (Internal Server Error)} if the
+     *         chuongTrinhDaoTao couldn't be updated.
+     * @throws URISyntaxException if the Location URI syntax is incorrect.
+     */
+    @PutMapping("/chuong-trinh-dao-taos/{id}")
+    public ResponseEntity<ChuongTrinhDaoTao> updateChuongTrinhDaoTao(
+        @PathVariable(value = "id", required = false) final Long id,
+        @Valid @RequestBody ChuongTrinhDaoTao chuongTrinhDaoTao
+    ) throws URISyntaxException {
+        log.debug("REST request to update ChuongTrinhDaoTao : {}, {}", id, chuongTrinhDaoTao);
+        if (chuongTrinhDaoTao.getId() == null) {
+            throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
+        }
+        if (!Objects.equals(id, chuongTrinhDaoTao.getId())) {
+            throw new BadRequestAlertException("Invalid ID", ENTITY_NAME, "idinvalid");
+        }
+
+        if (!chuongTrinhDaoTaoRepository.existsById(id)) {
+            throw new BadRequestAlertException("Entity not found", ENTITY_NAME, "idnotfound");
+        }
+
+        ChuongTrinhDaoTao result = chuongTrinhDaoTaoService.update(chuongTrinhDaoTao);
+        return ResponseEntity
+            .ok()
+            .headers(HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, chuongTrinhDaoTao.getId().toString()))
+            .body(result);
+    }
+
+    /**
+     * {@code PATCH  /chuong-trinh-dao-taos/:id} : Partial updates given fields of
+     * an existing chuongTrinhDaoTao, field will ignore if it is null
+     *
+     * @param id                the id of the chuongTrinhDaoTao to save.
+     * @param chuongTrinhDaoTao the chuongTrinhDaoTao to update.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body
+     *         the updated chuongTrinhDaoTao,
+     *         or with status {@code 400 (Bad Request)} if the chuongTrinhDaoTao is
+     *         not valid,
+     *         or with status {@code 404 (Not Found)} if the chuongTrinhDaoTao is
+     *         not found,
+     *         or with status {@code 500 (Internal Server Error)} if the
+     *         chuongTrinhDaoTao couldn't be updated.
+     * @throws URISyntaxException if the Location URI syntax is incorrect.
+     */
+    @PatchMapping(value = "/chuong-trinh-dao-taos/{id}", consumes = { "application/json", "application/merge-patch+json" })
+    public ResponseEntity<ChuongTrinhDaoTao> partialUpdateChuongTrinhDaoTao(
+        @PathVariable(value = "id", required = false) final Long id,
+        @NotNull @RequestBody ChuongTrinhDaoTao chuongTrinhDaoTao
+    ) throws URISyntaxException {
+        log.debug("REST request to partial update ChuongTrinhDaoTao partially : {}, {}", id, chuongTrinhDaoTao);
+        if (chuongTrinhDaoTao.getId() == null) {
+            throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
+        }
+        if (!Objects.equals(id, chuongTrinhDaoTao.getId())) {
+            throw new BadRequestAlertException("Invalid ID", ENTITY_NAME, "idinvalid");
+        }
+
+        if (!chuongTrinhDaoTaoRepository.existsById(id)) {
+            throw new BadRequestAlertException("Entity not found", ENTITY_NAME, "idnotfound");
+        }
+
+        Optional<ChuongTrinhDaoTao> result = chuongTrinhDaoTaoService.partialUpdate(chuongTrinhDaoTao);
+
+        return ResponseUtil.wrapOrNotFound(
+            result,
+            HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, chuongTrinhDaoTao.getId().toString())
+        );
+    }
+
+    /**
+     * {@code GET  /chuong-trinh-dao-taos} : get all the chuongTrinhDaoTaos.
+     *
+     * @param pageable the pagination information.
+     * @param criteria the criteria which the requested entities should match.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list
+     *         of chuongTrinhDaoTaos in body.
+     */
+    @GetMapping("/chuong-trinh-dao-taos")
+    public ResponseEntity<List<ChuongTrinhDaoTao>> getAllChuongTrinhDaoTaos(
+        ChuongTrinhDaoTaoCriteria criteria,
+        @org.springdoc.api.annotations.ParameterObject Pageable pageable
+    ) {
+        log.debug("REST request to get ChuongTrinhDaoTaos by criteria: {}", criteria);
+        Page<ChuongTrinhDaoTao> page = chuongTrinhDaoTaoQueryService.findByCriteria(criteria, pageable);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(ServletUriComponentsBuilder.fromCurrentRequest(), page);
+        System.out.println(page.getContent());
+        return ResponseEntity.ok().headers(headers).body(page.getContent());
+    }
+
+    /**
+     * {@code DELETE  /chuong-trinh-dao-taos/:id} : delete the "id"
+     * chuongTrinhDaoTao.
+     *
+     * @param id the id of the chuongTrinhDaoTao to delete.
+     * @return the {@link ResponseEntity} with status {@code 204 (NO_CONTENT)}.
+     */
+    @DeleteMapping("/chuong-trinh-dao-taos/{id}")
+    public ResponseEntity<Void> deleteChuongTrinhDaoTao(@PathVariable Long id) {
+        log.debug("REST request to delete ChuongTrinhDaoTao : {}", id);
+        chuongTrinhDaoTaoService.delete(id);
+        return ResponseEntity
+            .noContent()
+            .headers(HeaderUtil.createEntityDeletionAlert(applicationName, true, ENTITY_NAME, id.toString()))
+            .build();
+    }
+}
+```
+- ``@RestController``: trả về dữ liệu dưới dạng JSON.
+- ``@PathVariable``: lấy ra thông tin trong URL, dựa vào tên của thuộc tính đã định nghĩa trong ngoặc kép {id}
+- ``@RequestBody`` nói với Spring Boot rằng hãy chuyển Json trong request body thành đối tượng Todo.
+- ``@PostMapping``: có nhiệm vụ đánh dấu hàm xử lý POST request trong Controller. Một yêu cầu ***POST*** được sử dụng để gửi dữ liệu tới Server
+- ``@GetMapping``: có nhiệm vụ đánh dấu hàm xử lý GET request trong Controller. ***GET*** được sử dụng để lấy lại thông tin từ Server đã cung cấp bởi sử dụng một URI đã cung cấp. Các yêu cầu sử dụng GET chỉ nhận dữ liệu và không có ảnh hưởng gì tới dữ liệu.
+- ``@PatchMapping``: có nhiệm vụ đánh dấu hàm xử lý PATCH request trong Controller. ***PATCH***  thay đổi 1 phần các đại diện hiện tại của nguồn mục tiêu với nội dung được tải lên..
+- ``@PutMapping``: có nhiệm vụ đánh dấu hàm xử lý PUT request trong Controller. ***PUT*** thay đổi tất cả các đại diện hiện tại của nguồn mục tiêu với nội dung được tải lên.
+- ``@DeleteMapping``: có nhiệm vụ đánh dấu hàm xử lý DELETE request trong Controller. ***DELETE*** : gỡ bỏ tất cả các đại diện hiện tại của nguồn mục tiêu bởi URI.
