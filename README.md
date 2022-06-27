@@ -414,6 +414,8 @@ Là lớp trung gian dùng để chuyển đổi qua lại giữa DTO và Domain
 🔮 **Hibernate** là một thư viện ORM (Object Relational Mapping) mã nguồn mở giúp lập trình viên viết ứng dụng Java có thể map các objects (pojo) với hệ quản trị cơ sở dữ liệu quan hệ, và hỗ trợ thực hiện các khái niệm lập trình hướng đối tượng với cớ dữ liệu quan hệ.
 
 🔮 Hiểu ngắn gọn thì Hibernate sẽ là một layer đứng trung gian giữa ứng dụng và database, và chúng ta sẽ giao tiếp với Hibernate thay vì giao tiếp với database
+
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/hibernate.png)
 ### **1. Domain**
 
 ```java
