@@ -304,45 +304,67 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 
 ➡️ *Danh sách thông tin tất cả Chương trình đào tạo được hiển thị trên giao diện người dùng*
 
-## **[TUẦN 5: 14/06/2022 - 26/06/2022](https://github.com/hoangtuandev/report-vnptit)**
+## **[TUẦN 5, 6: 14/06/2022 - 03/07/2022](https://github.com/hoangtuandev/report-vnptit)**
 
 ### ☀️GIAO DIỆN QUẢN LÝ ĐÀO TẠO
 
-![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/GD_CTDT.jpg)
-➡️ Chương trình đào tạo sẽ quản lý danh sách các chương trình đào tạo bao gồm các chức năng như ```Thêm mới hoặc cập nhật chương trình đào tạo```, ```Xoá chương trình đào tạo```, ```Xem thông tin chi tiết chương trình đào tạo```, ```Quản lý học viên```, ```Duyệt khoá đào tạo```, ```Tìm kiếm``` và ```Xuất file danh sách```.
+![](https://lh3.googleusercontent.com/g17pJw3zK9bGV2_3uJduaWYVYji8-IznQuXGd_yQ2HFrYIowIHIewrhvl9M5euYnuvpB5uGDCOn9Tc8pV9Ih1DIorhRsyCOgZQlZ3pJSrMx4hJfJmsE8dEqJVX1WDLjkwb9Q-o1mww5_XEtId7jMUQlzDb0qQPo2JVa5wnUh6836cZj6pat6-hT_hzwVXog8I7v0-_C-fAPP_PwwA8DCIcl-n7xU0hpakZl2yw1ocTiL0ERQv0m8kb1uZMpWPcvjrliFcsJt9Op6aF80FhXRtcM3NwYa5WJIB4NWzfsg1GVo8MQuSNGWnf63bVsjramsKLsuGXnJ03PnTNZipuJVITK2BBkR0Q1f7GSjXmg6or_OGHxBkeoB70z8PnTOswLMuUXDcboGofnLLcjNlFkToIH7iVk1MoKqMDAb0Eld_QBQq7ua-Bzqk6cnU2YqmV2f4iltIdq4TM8QNXEIpCwsgtIQ-Dod18XCks9F7HCXAvK1dBGtKKqMOnQ1rkQaK2XMq5cxHPxNXlNNHdIYxzwZ9WGJ5IPornEnAkBX0T70m6yJh1uaVJvKqJFynQMoT3N_w54ur7DMe0v-go11v9XTZr7cO_HQ4-OiiG7FFX5SmUKW7yhDtMA8TJb7haMjnwWCl7HZPGcecqzkjq6f7TSxF8Vas8LlsYDXwdT3CoVETHctbsbyeUJ0ruqZCneddJSpnDQtsCHy-9MfLy7vv1ykUEXuTYOiGU3OHZ8sIZzBJYjvM6KUHVovoMOYwF0PiGPO8bD1nBCtjbkYxh_pEtfzadDAmzFyZTbQkAK2u9lWtLHDX6prsGpoRvznhSAPD0_Y72SGCg=w1825-h893-no?authuser=1)
 
-❄️ Chức năng [**Thêm mới hoặc cập nhật chương trình đào tạo**]()
+➡️ Chương trình đào tạo sẽ quản lý danh sách các chương trình đào tạo bao gồm các chức năng như ```Thêm mới chương trình đào tạo```, ```Cập nhật chương trình đào tạo```, ```Xoá chương trình đào tạo```, ```Xem thông tin chi tiết chương trình đào tạo```, ```Lịch đào tạo```, ```Duyệt khoá đào tạo```, ```Tìm kiếm``` và ```Xuất file danh sách```.
 
-![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/ThemCTDT.jpg)
-➡️ Thêm mới hoặc cập nhật chương trình đào tạo bao gồm các thuộc tính Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Địa điểm, Số buổi học, Đã duyệt, Nội dung và có khoá ngoại là Đối tượng. 
+❄️ Chức năng [**Thêm mới chương trình đào tạo**]()
 
-➡️ Trong đó, có hai thuộc tính là Tên chương trình và Đã duyệt là bắt buộc nhập.
+![](https://lh3.googleusercontent.com/pUNp-3VExQPyyufO4eJIKCiKUQJtXeZ5Otd64nXVmkopQ5sNGQmsONT0J_4A2N7PRWHcdndST-j_cdJTLcejET-8K8hlGMHZNblci6yhxE2YHyLgdUxN2ocKBN8dk077uAjr6F7dlEIuEj9Kfj0jqzBxzfii9UwzI45_bF-q-cmagf691USArxQ9TlnSZ__gAatJ5_mOIqiMXdI1QOBKBxN_tjuVBkWiVoG4NM-s_V9eKrNAVsVYfBDAWoDvY7XNEzQ8p9Kx_Q386T-rMyXsa0Id8MmHZe7Rwwo7mkiVYBs_RL61zXX5dfM_ljVBX0EzRhOpNgsxBwcp7D3Jp3N8ev32gwf_1evcrRlM5k08hHQyhQBEExQLnkFH0RLOGOG3ElKL58YsX7r0LRxH7ENRxcc4kigYxfhuRjcyZjJatMf7ZrhVM5LyCj4QKPv1r4LEjpMprT9CT6MpN1p0lrEFqo5dP1ly5x05-GigYTvP35n8ufi4divyUKT1UrI6vjYRwEa2rkEQT_DikmIoVomOStJAW2sXZ2qJjKQl-VZWSv-wCGQOMIrKeIWl-UXLD__BKY-0tZOSmm5EOTxjMtJTehXyKdwHfiwpHY_dEvQ4OR9sXzERFQ4dxXSejFVqwf4y0bB81QePuXiBrKJCv50ZCLohACT4K57Q1Y1631mcjVzF8oHuemUWPfWSRTgxDE6f1cB1eSTOoxTopLD6i-CnXnpGh_135E5aOGB8mrBTes5Ew6X7dkyaDzrIqEg0GHfUYV1QGurT7BFQucA7ieiUQRpfoyhWESgpKlRk_i3iE7TSwOGFpXjgRjz1ybMozKSFeXspwQ=w1895-h798-no?authuser=1)
+➡️ Thêm mới chương trình đào tạo bao gồm các thuộc tính Id, Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Địa điểm, Số buổi học, Đã duyệt, Nội dung và có khoá ngoại là Đối tượng. 
+
+➡️ Trong đó, có hai thuộc tính là Tên chương trình và Đã duyệt là bắt buộc nhập. Thuộc tính Id là có sẵn và tự động tăng.
+
+➡️ Ta chỉ cần nhập những dữ liệu cần thiết, sau đó nhấn vào nút ``Lưu``. Ngược lại, nhấn vào nút ``Huỷ`` để huỷ bỏ thao tác.
+
+❄️ Chức năng [**Cập nhật chương trình đào tạo**]()
+
+![](https://lh3.googleusercontent.com/R7pgVxPvUI7stC7X2AKNu2QRFKNodCilvq75DW_ab0bY7-agLeKbYgzHZfqK94_wN_PN4K6xkppWVkTRBMu36QOsWKgWIUE6RWROaVWI_QII6RUIP35fu8cb_zuaDVOJbSF53nRqPMIdWmOVle2DfLzbm3cV57Pir5zwWnNpTmWQ20NnvXnNvcMNA0zpqZErPm9rEZNuV-7MP8-6zlLCmcQXhkZEM7ZfyaK955OWvNOXscvt0qCl6WdeCO6OxPY-1tpA6vM2xmO_SJFgTlPjQURAwg_PoSstU8FMAKNZIBCF3PMFnNa12ImJuWAHR5XBkBlIBF5ZzZ5NGg7vB4NfqnMnzPcvUhiFXPTEC8WGuG1E9AFYJEnZJBa6jpRYc7i3OKBkgRaYj1iiXZa3kQCu0-cU1jJA7I2zCzvcb8PnJRPyWbr7fuRddlCWvPc0hqZfh5cLTrFRfLo2jxLO1iq3xNz1ihceACLl3HmvZqcBcd9jRdQMClaQFXpWfjNfKAbBmE2BnZwL285mQ7sFUlwXmLadLzoVjCJvenIN1rtCaBdATMuIkeqBVQh1iOlY2qE1QWUbhGkNETlltqxmeYqa6DxMOGUvl6IMZuzKQgXLirFAFQcoPHwk0xGY2m6xy6ux1oxPgq69jyu9W467dfIqHEI7j5XJPTCSswqtRVKbCOyagEyVyLpm2M8uqQyu6oC9mUR_Sc7nW7aMjUWKn9ojFmT6qdR3iWrKFiiszHRWRUrqmCxxkqJMmwz1YXLKhPlgb50gLP5XGgDZ4Sfsml7K42slsqlUpwLpxCWfm9eF0BHYLz6QQVGXzE-N8FSQuPUNY5043A=w1848-h893-no?authuser=1)
+➡️ Cập nhật chương trình đào tạo sẽ lấy lại các thuộc tính Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Địa điểm, Số buổi học, Đã duyệt, Nội dung và Đối tượng từ Chương trình đào tạo. 
+
+➡️ Khi cần cập nhật lại thuộc tính nào đó thì ta chỉ cần xoá và nhập lại, sau đó nhấn vào nút ``Lưu``. Ngược lại, nhấn vào nút ``Huỷ`` để huỷ bỏ thao tác.
 
 ❄️ Chức năng [**Xoá chương trình đào tạo**]()
 
-![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/XoaCTDT.jpg)
+![](https://lh3.googleusercontent.com/w9BzBGX6azRpDF94Es5pLmohBllSWC7lGMG9CyxVs2_xvPKHSUrnGxNVrwj47OryctMKeHSROWYFwmOjJd_LcIaJWd_7hqTbwmBqpcr5wiNURVBAuKxCl8pNI62yuxdiCscdNzkCLoa5T95aQ7fOz0cpd5QC3Malnd4V50C0Hm8B_GQfYY_ZokgBtwy-EPR50DeAIWvBOgQkvXfy9466YQ_EfSesn58Av1ZKzbfFN59GGHFCEjpyR9v0h-_yCIbKsZ9uHZ1znmW71MHnOaaQBYVzVlRlMQUZLIbO5hbpDl_F5GBDQ8pzW12SvK9frI-QIA3V4hnETMmMjMdGXaML50BLSQtdZ-mSstpJDYiL7J7ubhG22-leqbQLAa8NGlNb43W_iJhDsQgozXoTW1FkjT661g25CpL8foakw1EQaI03WeVMpGiQnq7lh3sTIiCGIUScPZ5NtOfGn5yhW7t2O91H6SbsSy4B6FIA-XjTTkYSjo6yr-FqFCKO2iIjz-BAwgpuwA9wid85h8v0Q0wYhm8MNci-U7V84gn0S39i5l5vTB_ySm0-x_dAn8liedjkArGMzoJJdoXeRJHORaWMJCyYZ8zeCsrbjm0TnNIxD18y13rRMXA807CdShm9BdoiD-eLtobypZJB34na4-lHlE8bsY3OsQieHvgUGzEJu1Bq0hGsQ1FJ8Kk0-J80t0PzkjgwBsph6lI721mt_IZDu1Q2te8z_zSxB9qWGdaYEgRwEVsL1xIU2VW0G9_xUVpjuwnpywbRNMEXYMOfASNHD8vmL9Z6u7wKUMRDlxZ0Prf6_ZGblyamd_za2ImzI7CbAJdEDw=w1298-h366-no?authuser=1)
 ➡️ Khi click vào icon ❌ thì sẽ hiển thị thông báo xác nhận xoá chương trình đào tạo. Nếu muốn xoá sẽ click vào nút ```Xoá```, còn không muốn xoá nữa sẽ click vào nút ```Huỷ```.
 
 ❄️ Chức năng [**Xem thông tin chi tiết chương trình đào tạo**]()
 
-![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/ViewCTDT.jpg)
+![](https://lh3.googleusercontent.com/hkGtoi6I8u4ubzJq0N-DSnCPifBidGcH7QQR-TrIuKu6JXP8nQtb5_gcVBv01qPlt7w4T_L1flWQTScTvzTD8dMLaaOVIR2RMSoMQkC7-NfyAfqIefNbvllFRhF-AWbZpaJNjFvI6oVdRx2e4QDFMUn5xd4ZM8opQ3nQET5LjVqY2ImsDbkP0uqMqeN32K6glj_9LTPYc3JJ4gnPXlUmNH3qdDhmbAiM0jZFGDGekYfOYmPU7sTWz_RQ3lAMha8K9faSb64COtgxbNjhlhkOjdVJFRgjhuW9u-TMzU6cEPGf__dfkY3wOBLSGapKXPoFKpCdgwX7zNDeUiRopHOLhIKlFlZfo2XnIRT51CAh4NGl_nq_-XYexYdRhnYyDtdKocEQXI7ldGP_WraGuP9f_0oG_uqUkACSPIbOo0_vTvA_BHtNc6XYfBp02HJxB9ywymRnqo_1FQTd0wi-hKK6NjI8PEeSPXOwWF2H69UX62dFrAmX1dWSkAWePwhJvwciDOjzZFBnJ0T1BN7styKnDpwTw9CzIlHJVTi2G0ZaWwBT1lpqnURKErxo2w2rsKR5rNwotXk0Cxxr7mIGihIzbxSUclPdtjqHUi1rwgy9lzXjslTVaG8BJPJPxwDCLwDWRYF-LRWMuOd7zA_r8o5P-9PFI-Anf6tYMMH3Brg2_WAjVqj7TpEk9Zxqsm8U-wU3cEeXGyE2RYh0rGPgnBCrRxeoDws7cuUxXNz_kQIc4fOCius1LvdVUkJgMeXa1HbN2btMPGf8_fygfEIrK9aNSa_aEwKFPLT_B3XKDfJ-qMCHEntVNdX4MdG-YOQTCeO7okCJkg=w1112-h893-no?authuser=1)
 ➡️ Khi click vào icon 👀 thì sẽ hiển thị một form chứa đầy đủ thông tin của một Chương trình đào tạo. Khi bạn muốn thoát chỉ cần click vào nút ```Đóng```.
+
+❄️ Chức năng [**Lịch đào tạo**]()
+
+![](https://lh3.googleusercontent.com/Z7ALtPS_qCmef8gZSeFJgK82GUIUTXVUFVmR0UrpWanQm1X9k2Pj29SnH1dwHnliIsDkaXp5fKNn-hrEku3qG9nqaMuRibPEuSvfiwz8pcdpiJOrezvH3z2A0hQqDA7Iok4EObVeohapmsfrFNT_2-3Ld8DlD1Xlwzr0q2PJG41pMmlq9XZCwADXrrUoL9G8ZJfoZq9niZAVyi5DRItc4Mhsl8mX2kseHW-g28THXgm6QpmsvcKd2lXNFa_DZZ3Tfb1G21o_WciRwM_BhebiYt4CN-X0e2WxRAxomhEfJguhodblBHeE7HGCk-OjGenRsmtwDXqZzLszB_A5rsKKhURz6--xBGH2MCW1nEzre4SOHzYFuzcmNc9ZB-ATX4LA1UyDn6dpx-zLB1jtnpTbpOuEtGrMddLoZY0Wo2zmmonkhVqpYla1qFFq1vDd-z8l2CON2je2K4VTapLM31cV4q_KY88c3PgL8QF_jjVIz64BNaugOjkwF0mZLb0x5DkB3tiGFdgsjx9MWGzMtBchz7GiauPWdqLOHx_DnGyRJupsw_uRT5Yrg24PUekcl9Dlef8AsJtanHF4YJBGDtE0ayJFQDTqQWnkA3bGRxtsgJLCbgAp2gStE_kdK8OtLOarGGSANMeb2r_SPl0yz2tzcR2e7KiV3ZyDrgxDKIRsUu8svy_bXeCorSVayrJe8lAaOg3DfEK01z7_E-ggPO_Sc67gJQ6lA7dpnxojsmaOE6U8cajgM81Lm_0qL2yrDF8xX0KdCRkYAMgPnxEDBpSXTN_hvr-XH0Kcg1XnvbMqL8pdFwJk9ELdaquVZE-2yFwUoeGt1Q=w1897-h623-no?authuser=1)
+➡️ Hiển thị danh sách lịch đào tạo.
+
+❄️ Chức năng [**Thêm mới Lịch đào tạo**]()
+
+![](https://lh3.googleusercontent.com/gnh-WGiPaTCRA4QN1vm5dFuCqSqFUe8sC-WZvpmEAfU-aLUWOQ0pe_L74cPA8bYznj7gRV136z-arS21DLtWqwJaxD8ptEzP7m9-llprESUqoijiF4q9gzAA3DVsXMhHES-Fc-yc2_rbZAoZ_sPOnInQYrxB_YL5vrqqjXGXHcVWDGnkgiiSdR0orHe3Wco5BGmKeBcZ0kFnULbrHMYaedNtyGzZihjjYY7m4NzXiQxks651u4r2BoXRYqkkIcdPdwDiiPve21qDFp3tGwvHv9_CNOgPHEGeAsCCarpNiS8FLbcJjFPOTYEPEp2fYNlMTvDuAVNLH9aHGefY6ddnaPjRbwETtJ8lZ8nFF8i2TVu96YYSDoNkPciE1AACwjuU336P-DyF3k_pcnVOq4RApmRgtBxpW55klZ_pKPvWYQwYw0IKrQfVws8uxdTRQ-pwesigRg2zeuvgtKZHb-Ng7gQWWWzGjyZaOGIh6_Ck9cXAvn0uf5M38ODZLvbU-lRSPR-Ve7yO_XfI_ot4Bg4R2eDS_V5AEjWYvbs8pwIPO8OD6inEHBtFEkIWY2FP4HzkTa2pm2LJRQ9a342P4DB6n_2WggCrU0oSDKzNTMs-bI55K_ArB2bUWg-S0ePG6yiKxQZmsKFFFmpNzMo2hbMQc13zbbKa_EUI2iNPliGIuAVZ0heGL6ep4zboYv5_Syf3fBJNF0ma8_-R8Y8OYvW5P8UIZl8FrVkLmxGPD8zDTrCZMf8mPiLXjEyy0-A_vFnQvXYId2EWB_qFIdj8O2XC6ygN7SLACfw5ex_ueua5C8UhrzUvQTpPvCXppTlfNxqsB_2tnQ=w1568-h893-no?authuser=1)
+➡️ Lịch đào tạo có các thuộc tính Thời gian bắt đầu, Thời gian kết thúc, Nội dung đào tạo, Tên Lịch đào tạo, Giảng viên, Chương trình đào tạo.
+
+➡️ Trong thuộc tính Chương trình đào tạo, ta chỉ chọn được các Chương trình đào tạo ``Đã được duyệt``.
 
 ❄️ Chức năng [**Tìm kiếm**]()
 
-![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/TimKiemCTDT.jpg)
+![](https://lh3.googleusercontent.com/sG4EBL8b7o32DT7WzezvaQJvB87c6sTL-3vpVv-v5hETK6fD64sQ2jKC5GhLbOdzAOQYibWlhq81vrS__BUoL5WSmXOf2mdLKzU2VyL2om5iTMP-R8rfLe_zIxk4E7kqOMFn3BUYOY9tUGcu5s5WzoX9rr7U9mn7tu0bLmVju93mtNAYZbLgjdA1p8Jfxqxf3mQCNdr4gfMgX9sI8KKn-lXbGAX7n5uWcUWuRpfiymA46qEvzjbB857lir3apn24S5jkoX_m62thLE_GF67GDiHvTn1xQhGYK5XuBkf4fCPmoKXv61oGSGNYRc-RRl_URC3rlCmH_odUzDWXLcQ1_KsaZsNROFKTq9I2UvjZiTMNmZRTOnB55go9XkZSSUbjheDTVbDTPfKBNe6wwXc-FdkVdurq2T61YICoGI-TtJQVMeBHi8NOSjdNCHjs3-YpxImF1qmLizBM-mZ78-9qZMjUy3VSiQExz4HNBhBnJ2MjlXFICYFpJwq4b09XsAnFx1WCBU3s8llL-WvgW7FtSqlecIJJcKiDYNKa33xPjpV8AVSSDdEyRCTX8upfDLddf7lu7c83ooxR5ETD-bVlQzW90SI_l_mxMnHo56qxjgetBQyj3tqoozX8KojPJ7R_bqBH0Ok4OGOy0ZcXnIsslVVyeFMK1hZl768R0UoSGRhrPu1FSbepd1mDI0jURWIK4gqZhL0T34UB4H7KpdBf1kbK5FUcuEdsoT5jDeo3-13dGLva0BEWzPIYSUW-rAmHoWu9DdCVKHRb0UospiDXJ1xN_4op3P2uUGcrQnET0O8_oZ9vq49UCqD-gQVDqnqjdURpfA=w1899-h829-no?authuser=1)
 ➡️ Tìm kiếm bao gồm các thuộc tính Từ ngày, Đến ngày, Địa điểm, Mã đào tạo và Tên đào tạo. Khi ```Tìm kiếm```, chúng ta có thể nhập dữ liệu cho một hoặc nhiều thuộc tính để tiến hành tìm kiếm.
 
 ➡️ Nếu muốn hiển thị lại danh sách chương trình đào tạo, ta sẽ click vào nút ```Tất cả``` thì sẽ hiển thị lại danh sách.
 
 ❄️ Chức năng [**Xuất file danh sách**]()
 
-![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/XuatFileDSCTDT.jpg)
+![](https://lh3.googleusercontent.com/67bSp6_qDGLR52uoBHO8IeffrTJoA-itWczG5us4jbCbBpP2mkN7mi7TaG9A_H6TA2QGiF4VundUxSAr_bjxD0J6ugcH7Q9MvyqokXSuvc0ovUyI9tAVeXJXzaPBKo6UwNyVe4U4U3gEDwpQPuvwXznl5w9kDMI27DQEhQlv0NA4EsDSophFHFBM4g6IPh2ze26YY11f9CJ_JjaLP_5-Eo4jYADK5fjkyj05JLzmPr1WpN0Cfl03Mr8Af8AZqOLmf3W6h3pnl_oxvDRN0B20R5KOMBYngefyELEXrK9m2D4n7kIFvNjibfRFteRZWYXOvmKfBGtJ-RB6x0HNiNEYkAYTBEgT-tF_FACifdLCfWLKa6gCTqTVEM39ma4robihWvLXv0ocPgR8sfk_w5xFGs6sPKFX8UGdbjWeEKgB39RghiGT6tNV1z4LPIf00LTfffV07F4ByUf2vCpAhACZT2WZjr4VrwggDEbe1oPXwu9ILJMQvaerOET3eKUv6kxBRqbDPz4t1_W-mzh3pTFRd2YQSoUvkoUz2x6zt_hv2Hu8UOMyc0sDFFvlxBmppFWQ5yJEdEPxgZNmViiawmh7nJ5yxw3f_dkhi9j5EFVkmW2EodRYddeeVfVeWnfi0Aubl4KINCsanP1a-Acg1AqIzHojlWwtrXXfSPWSGWKH5ayB-9Wfjb1qlCKW0DTHtW3ptD91NeXmdAxksbUR95uy_QYPRxFsaEIEGNJ10eVFVsZI99BHXMQvh2BgyxaKFqynxBHF1jc6KlaLC9NJcfZuvdDG2959iPPjFw0oPSHhCnj1PBeG2Aykn1CSNxpDbA1ArzArIg=w1887-h489-no?authuser=1)
 ➡️ Khi click vào nút ```Xuất file danh sách``` thì chúng ta sẽ xuất được một file excel với đầy đủ thông tin của tất cả chương trình đào tạo.
 
 ❄️ Chức năng [**Duyệt chương trình đào tạo**]()
 
-![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/DuyetCTDT.jpg)
+![](https://lh3.googleusercontent.com/07GJcroaX7Whn_Tb6RZOlG0lF2Hxaqwjd_QxpbeBDfLN_HKFp0osuH1WncT_MvHlqUi5_kxwW0uKhCaeE2_OdPFpan9s5YH1C8X49FR2BVQ7z8y7KsBVnG-qjUo9dzlkWXrhF9dT3M44I_IZoVeO6As-HRKNU_iuIveLXfjw7tOOqkgiB1bF-wU3ILd8_PUaNpE1mBkAF_41kZDQJ8G8FfoBYlamg66LBQUzSP3gj290CK8yC30C_2IRuEYwGvmeaMgrcMY4xTnniauJfz22_Gpgohcc4neRX2gyNOdcJTUsjuyZLGCXTWTjmEAvbuazkReqm69ikJmO_MEqGzXaigD0ZtUquLYD98X-jmFX89s2cGyTPFwjeqWRoyS4LDWsaSPsrUj506QhKu-SJSeyt-TIi9UHGCdRjJoTdWxdddG8gM6BCW6Rjz-z3plEe_UcLhzQqewaOpd5Uka0zl_ZK2JDWsESkULz0DxIpBymnzEqt9AxKLWtfyGNpBXSu9VoZvMi1nAQ0cv1uzmk_xKySqe2vYBZ_PQuoJZbenRTrY_zMh08ZlYsjYCVhzkz5DocpcSU2912EZJwTEEBcma8fHrzBuSLEWSlukpcPYn-zu8SXQ-kxF7UYFG2tztlAWEGyV0jxaSKAqnZirlGb9zhQnB6b7XntjTM49bQrrQCNYqU4ohW7iydw-PtM9Q4os8XYYXPUekq9vFfbztRcbTTBkXsX9PO5lo-pykzojPXetaXK2cHamxd7CmLzSP4T3gkzMpR9CFJszTKtrfWbE0rdyihfCb_dYItgudhZdk4ZV4IMrtUTCEq8ARwafKmvlPqfS-rAQ=w1898-h679-no?authuser=1)
 ➡️ Khi click vào nút ```Duyệt khoá đào tạo``` thì sẽ hiển thị được danh sách chứa các chương trình đào tạo chưa được duyệt.
 
 ➡️ Muốn duyệt một chương trình đào tạo nào đó, ta chỉ cần check vào checkbox thì nó sẽ chuyển sang trạng thái là ```"Đã duyệt"```.
@@ -417,7 +439,9 @@ Là lớp trung gian dùng để chuyển đổi qua lại giữa DTO và Domain
 
 ![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/hibernate.png)
 ### **1. Domain**
-
+- Một Entity (Domain) là ánh xạ của 1 bảng ở db vào java, với ``@Column(name = "tencotdb")``
+- Các thuộc tính đi kèm trong ``@Column`` như ``nullable``, ``length`` sẽ được tự tạo khi file jhipster của
+entity được generate.
 ```java
 /**
  * A ChuongTrinhDaoTao.
