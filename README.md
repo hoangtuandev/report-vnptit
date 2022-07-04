@@ -308,15 +308,15 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 
 ### ☀️GIAO DIỆN QUẢN LÝ ĐÀO TẠO
 
-![](https://i.pinimg.com/originals/33/66/4c/33664c64e4810499c4c92a84e5e20906.jpg)
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/GD_CTDT.jpg)
 
 ➡️ Chương trình đào tạo sẽ quản lý danh sách các chương trình đào tạo bao gồm các chức năng như ```Thêm mới chương trình đào tạo```, ```Cập nhật chương trình đào tạo```, ```Xoá chương trình đào tạo```, ```Xem thông tin chi tiết chương trình đào tạo```, ```Lịch đào tạo```, ```Duyệt khoá đào tạo```, ```Tìm kiếm``` và ```Xuất file danh sách```.
 
 ❄️ Chức năng [**Thêm mới chương trình đào tạo**](https://www.google.com)
 
-![](https://i.pinimg.com/originals/b5/89/f4/b589f4e98a3422246a8997db2c43c61b.jpg
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/Them_CTDT.jpg)
 
-➡️ Thêm mới chương trình đào tạo bao gồm các thuộc tính Id, Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Địa điểm, Số buổi học, Đã duyệt, Nội dung và có khoá ngoại là Đối tượng. 
+➡️ Thêm mới chương trình đào tạo bao gồm các thuộc tính Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Địa điểm, Số buổi học, Đã duyệt, Nội dung và có khoá ngoại là Đối tượng. 
 
 ➡️ Trong đó, có hai thuộc tính là Tên chương trình và Đã duyệt là bắt buộc nhập. Thuộc tính Id là có sẵn và tự động tăng.
 
@@ -324,33 +324,33 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 
 ❄️ Chức năng [**Cập nhật chương trình đào tạo**](https://www.google.com)
 
-![](https://i.pinimg.com/originals/6b/08/8b/6b088bf2d6c4ced6583eb80978dfe409.jpg)
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/CapNhat_CTDT.jpg)
 
-➡️ Cập nhật chương trình đào tạo sẽ lấy lại các thuộc tính Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Địa điểm, Số buổi học, Đã duyệt, Nội dung và Đối tượng từ Chương trình đào tạo. 
+➡️ Cập nhật chương trình đào tạo sẽ lấy lại các thuộc tính Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Địa điểm, Số buổi học, Đã duyệt, Nội dung và Đối tượng từ Chương trình đào tạo dựa theo Id. 
 
 ➡️ Khi cần cập nhật lại thuộc tính nào đó thì ta chỉ cần xoá và nhập lại, sau đó nhấn vào nút ``Lưu``. Ngược lại, nhấn vào nút ``Huỷ`` để huỷ bỏ thao tác.
 
 ❄️ Chức năng [**Xoá chương trình đào tạo**](https://www.google.com)
 
-![](https://i.pinimg.com/originals/06/d9/93/06d9935a347467cc97cf4cf176e64ed0.jpg)
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/Xoa_CTDT.jpg)
 
 ➡️ Khi click vào icon ❌ thì sẽ hiển thị thông báo xác nhận xoá chương trình đào tạo. Nếu muốn xoá sẽ click vào nút ```Xoá```, còn không muốn xoá nữa sẽ click vào nút ```Huỷ```.
 
 ❄️ Chức năng [**Xem thông tin chi tiết chương trình đào tạo**](https://www.google.com)
 
-![](https://i.pinimg.com/originals/b2/45/19/b245192feb493076ab17a76a87227129.jpg)
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/Xem_CTDT.jpg)
 
 ➡️ Khi click vào icon 👀 thì sẽ hiển thị một form chứa đầy đủ thông tin của một Chương trình đào tạo. Khi bạn muốn thoát chỉ cần click vào nút ```Đóng```.
 
 ❄️ Chức năng [**Lịch đào tạo**](https://www.google.com)
 
-![](https://i.pinimg.com/originals/ff/49/80/ff4980f2087eb77d1b6ca5e207c344df.jpg)
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/GD_LichDT.jpg)
 
 ➡️ Hiển thị danh sách lịch đào tạo.
 
 ❄️ Chức năng [**Thêm mới Lịch đào tạo**](https://www.google.com)
 
-![](https://i.pinimg.com/originals/23/66/c5/2366c56a066a047f2f9a3641ae6827d2.jpg)
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/ThemLichDT.jpg)
 
 ➡️ Lịch đào tạo có các thuộc tính Thời gian bắt đầu, Thời gian kết thúc, Nội dung đào tạo, Tên Lịch đào tạo, Giảng viên, Chương trình đào tạo.
 
@@ -358,7 +358,7 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 
 ❄️ Chức năng [**Tìm kiếm**](https://www.google.com)
 
-![](https://i.pinimg.com/originals/58/cc/0a/58cc0a580aa98e377ffbed4b435ad30d.jpg)
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/TimKiem_CTDT.jpg)
 
 ➡️ Tìm kiếm bao gồm các thuộc tính Từ ngày, Đến ngày, Địa điểm, Mã đào tạo và Tên đào tạo. Khi ```Tìm kiếm```, chúng ta có thể nhập dữ liệu cho một hoặc nhiều thuộc tính để tiến hành tìm kiếm.
 
@@ -366,13 +366,13 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 
 ❄️ Chức năng [**Xuất file danh sách**](https://www.google.com)
 
-![](https://i.pinimg.com/originals/7b/ab/0b/7bab0bf469d64e0a819581db067b9a0c.jpg)
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/XuatFile_CTDT.jpg)
 
 ➡️ Khi click vào nút ```Xuất file danh sách``` thì chúng ta sẽ xuất được một file excel với đầy đủ thông tin của tất cả chương trình đào tạo.
 
 ❄️ Chức năng [**Duyệt chương trình đào tạo**](https://www.google.com)
 
-![](https://i.pinimg.com/originals/89/cd/47/89cd4758ac2756c2f4f47b161824b620.jpg)
+![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/Duyet_CTDT.jpg)
 
 ➡️ Khi click vào nút ```Duyệt khoá đào tạo``` thì sẽ hiển thị được danh sách chứa các chương trình đào tạo chưa được duyệt.
 
