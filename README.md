@@ -312,9 +312,8 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 
 ➡️ Chương trình đào tạo sẽ quản lý danh sách các chương trình đào tạo bao gồm các chức năng như ```Thêm mới chương trình đào tạo```, ```Cập nhật chương trình đào tạo```, ```Xoá chương trình đào tạo```, ```Xem thông tin chi tiết chương trình đào tạo```, ```Lịch đào tạo```, ```Duyệt khoá đào tạo```, ```Tìm kiếm``` và ```Xuất file danh sách```.
 
-❄️ Chức năng [**Thêm mới chương trình đào tạo**](https://www.google.com)
 
-![](https://coolorganic.000webhostapp.com/images/ThemCTDT.png)
+![](https://coolorganic.000webhostapp.com/images/ThemChuongTrinhDT.png)
 
 ➡️ Thêm mới chương trình đào tạo bao gồm các thuộc tính Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Địa điểm, Số buổi học, Đã duyệt, Nội dung và có khoá ngoại là Đối tượng. 
 
@@ -1043,4 +1042,17 @@ public class ChuongTrinhDaoTaoResource {
 ## **[TUẦN 7: 04/07/2022 - 11/07/2022](https://github.com/hoangtuandev/report-vnptit)**
 
 ### ☀️HOÀN THIỆN CHỨC NĂNG TÌM KIẾM CHƯƠNG TRÌNH ĐÀO TẠO
+
+❄️ [**Tìm kiếm theo 'ID'**](https://www.google.com)
+
+![](https://coolorganic.000webhostapp.com/images/TimKiemTheoID.png)
+
+❄️ [**Tìm kiếm theo 'tên' và 'địa điểm'**](https://www.google.com)
+
+![](https://coolorganic.000webhostapp.com/images/TimKiemTheoTenVaDiaDiem.png)
+
+❄️ [**Tìm kiếm từ 'ngày bắt đầu' đến 'ngày kết thúc'**](https://www.google.com)
+
+![](https://coolorganic.000webhostapp.com/images/TimKiemTheoNgay.png)
+
 
