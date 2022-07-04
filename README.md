@@ -308,13 +308,13 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 
 ### ☀️GIAO DIỆN QUẢN LÝ ĐÀO TẠO
 
-![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/GD_CTDT.jpg)
+![](https://coolorganic.000webhostapp.com/images/TrangChuCTDT.png)
 
 ➡️ Chương trình đào tạo sẽ quản lý danh sách các chương trình đào tạo bao gồm các chức năng như ```Thêm mới chương trình đào tạo```, ```Cập nhật chương trình đào tạo```, ```Xoá chương trình đào tạo```, ```Xem thông tin chi tiết chương trình đào tạo```, ```Lịch đào tạo```, ```Duyệt khoá đào tạo```, ```Tìm kiếm``` và ```Xuất file danh sách```.
 
 ❄️ Chức năng [**Thêm mới chương trình đào tạo**](https://www.google.com)
 
-![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/Them_CTDT.jpg)
+![](https://coolorganic.000webhostapp.com/images/ThemCTDT.png)
 
 ➡️ Thêm mới chương trình đào tạo bao gồm các thuộc tính Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Địa điểm, Số buổi học, Đã duyệt, Nội dung và có khoá ngoại là Đối tượng. 
 
@@ -324,7 +324,7 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 
 ❄️ Chức năng [**Cập nhật chương trình đào tạo**](https://www.google.com)
 
-![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/CapNhat_CTDT.jpg)
+![](https://coolorganic.000webhostapp.com/images/CapNhatCTDT.png)
 
 ➡️ Cập nhật chương trình đào tạo sẽ lấy lại các thuộc tính Tên chương trình, Ngày bắt đầu, Ngày kết thúc, Địa điểm, Số buổi học, Đã duyệt, Nội dung và Đối tượng từ Chương trình đào tạo dựa theo Id. 
 
@@ -332,25 +332,25 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 
 ❄️ Chức năng [**Xoá chương trình đào tạo**](https://www.google.com)
 
-![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/Xoa_CTDT.jpg)
+![](https://coolorganic.000webhostapp.com/images/XoaCTDT.png)
 
 ➡️ Khi click vào icon ❌ thì sẽ hiển thị thông báo xác nhận xoá chương trình đào tạo. Nếu muốn xoá sẽ click vào nút ```Xoá```, còn không muốn xoá nữa sẽ click vào nút ```Huỷ```.
 
 ❄️ Chức năng [**Xem thông tin chi tiết chương trình đào tạo**](https://www.google.com)
 
-![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/Xem_CTDT.jpg)
+![](https://coolorganic.000webhostapp.com/images/XemCTDT.png)
 
 ➡️ Khi click vào icon 👀 thì sẽ hiển thị một form chứa đầy đủ thông tin của một Chương trình đào tạo. Khi bạn muốn thoát chỉ cần click vào nút ```Đóng```.
 
 ❄️ Chức năng [**Lịch đào tạo**](https://www.google.com)
 
-![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/GD_LichDT.jpg)
+![](https://coolorganic.000webhostapp.com/images/TrangChuLDT.png)
 
 ➡️ Hiển thị danh sách lịch đào tạo.
 
 ❄️ Chức năng [**Thêm mới Lịch đào tạo**](https://www.google.com)
 
-![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/ThemLichDT.jpg)
+![](https://coolorganic.000webhostapp.com/images/ThemLDT.png)
 
 ➡️ Lịch đào tạo có các thuộc tính Thời gian bắt đầu, Thời gian kết thúc, Nội dung đào tạo, Tên Lịch đào tạo, Giảng viên, Chương trình đào tạo.
 
@@ -358,7 +358,7 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 
 ❄️ Chức năng [**Tìm kiếm**](https://www.google.com)
 
-![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/TimKiem_CTDT.jpg)
+![](https://coolorganic.000webhostapp.com/images/TimKiemTheoTenVaDiaDiem.png)
 
 ➡️ Tìm kiếm bao gồm các thuộc tính Từ ngày, Đến ngày, Địa điểm, Mã đào tạo và Tên đào tạo. Khi ```Tìm kiếm```, chúng ta có thể nhập dữ liệu cho một hoặc nhiều thuộc tính để tiến hành tìm kiếm.
 
@@ -366,13 +366,13 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 
 ❄️ Chức năng [**Xuất file danh sách**](https://www.google.com)
 
-![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/XuatFile_CTDT.jpg)
+![](https://coolorganic.000webhostapp.com/images/ExportCTDT.png)
 
 ➡️ Khi click vào nút ```Xuất file danh sách``` thì chúng ta sẽ xuất được một file excel với đầy đủ thông tin của tất cả chương trình đào tạo.
 
 ❄️ Chức năng [**Duyệt chương trình đào tạo**](https://www.google.com)
 
-![](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/Duyet_CTDT.jpg)
+![](https://coolorganic.000webhostapp.com/images/DuyetCTDT.png)
 
 ➡️ Khi click vào nút ```Duyệt khoá đào tạo``` thì sẽ hiển thị được danh sách chứa các chương trình đào tạo chưa được duyệt.
 
@@ -1039,3 +1039,8 @@ public class ChuongTrinhDaoTaoResource {
 - ``@PatchMapping``: có nhiệm vụ đánh dấu hàm xử lý PATCH request trong Controller. ***PATCH***  thay đổi 1 phần các đại diện hiện tại của nguồn mục tiêu với nội dung được tải lên..
 - ``@PutMapping``: có nhiệm vụ đánh dấu hàm xử lý PUT request trong Controller. ***PUT*** thay đổi tất cả các đại diện hiện tại của nguồn mục tiêu với nội dung được tải lên.
 - ``@DeleteMapping``: có nhiệm vụ đánh dấu hàm xử lý DELETE request trong Controller. ***DELETE*** : gỡ bỏ tất cả các đại diện hiện tại của nguồn mục tiêu bởi URI.
+
+## **[TUẦN 7: 04/07/2022 - 11/07/2022](https://github.com/hoangtuandev/report-vnptit)**
+
+### ☀️HOÀN THIỆN CHỨC NĂNG TÌM KIẾM CHƯƠNG TRÌNH ĐÀO TẠO
+
