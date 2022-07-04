@@ -1041,7 +1041,7 @@ public class ChuongTrinhDaoTaoResource {
 
 ## **[TUẦN 7: 04/07/2022 - 11/07/2022](https://github.com/hoangtuandev/report-vnptit)**
 
-### ☀️HOÀN THIỆN CHỨC NĂNG TÌM KIẾM CHƯƠNG TRÌNH ĐÀO TẠO
+## ☀️HOÀN THIỆN CHỨC NĂNG TÌM KIẾM CHƯƠNG TRÌNH ĐÀO TẠO
 
 ❄️ [**Tìm kiếm theo 'ID'**](https://www.google.com)
 
@@ -1055,4 +1055,24 @@ public class ChuongTrinhDaoTaoResource {
 
 ![](https://coolorganic.000webhostapp.com/images/TimKiemTheoNgay.png)
 
+
+## ☀️TESTCASE
+
+![](https://coolorganic.000webhostapp.com/images/TC_DangNhap.png)
+
+![](https://coolorganic.000webhostapp.com/images/TC_ThemCTDT.png)
+
+![](https://coolorganic.000webhostapp.com/images/TC_CapNhatCTDT.png)
+
+![](https://coolorganic.000webhostapp.com/images/TC_XoaCTDT.png)
+
+![](https://coolorganic.000webhostapp.com/images/TC_XemCTDT.png)
+
+![](https://coolorganic.000webhostapp.com/images/TC_ThemLDT.png)
+
+![](https://coolorganic.000webhostapp.com/images/TC_TimKiemCTDT.png)
+
+![](https://coolorganic.000webhostapp.com/images/TC_XuatFile.png)
+
+![](https://coolorganic.000webhostapp.com/images/TC_DuyetCTDT.png)
 
