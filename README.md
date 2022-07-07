@@ -153,11 +153,11 @@ Cơ sở dữ liệu phân tán phân tán là một tập hợp dữ liệu có
 
 🌼**1. Chức năng "Thêm Chương Trình Đào Tạo"**
 
-![ThemChuongTrinhDaoTao.png](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/ThemChuongTrinhDaoTao.png)
+![ThemChuongTrinhDaoTao.png](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/ThemChuongTrinhDaoTao_Squence.png)
 
 🌹**2. Chức năng "Sửa Chương Trình Đào Tạo"**
 
-![SuaChuongTrinhDaoTao.png](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/SuaChuongTrinhDaoTao.png)
+![SuaChuongTrinhDaoTao.png](https://huongb1809130.000webhostapp.com/LTWeb/Image_QLDT/SuaChuongTrinhDaoTao_Squence.png)
 
 🌻**3. Chức năng "Xoá Chương Trình Đào Tạo"**
 
